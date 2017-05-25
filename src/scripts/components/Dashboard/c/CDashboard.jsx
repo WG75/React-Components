@@ -1,15 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import SVGInline from 'react-svg-inline'
-const styles =  require('./dashboard.sass')
+import React from 'react';
+import PropTypes from 'prop-types';
+import SVGInline from 'react-svg-inline';
+import styles from './dashboard.scss';
 
 
-export const Header = (props) => {
+
+export const Header = ({text, icon}) => {
 
   return (
+    <div className={styles.headerWrapper}>
       <div className={styles.header}>
-        <ListItem textLabel={props.text} icon={props.icon}/>
+        <h3>{text}</h3>
+        <Icon svgIcon={icon}/>
       </div>
+    </div>
   )
 }
 
@@ -20,13 +24,15 @@ Header.PropTypes = {
 
 
 
-export const ListItem = (props) => {
+export const ListItem = ({icon, textLabel}) => {
 
   return (
+    <a href="">
       <div className={styles.listItem}>
-        <Icon svgIcon={props.icon}/>
-        <h3>{props.textLabel}</h3>
+        <Icon svgIcon={icon}/>
+        <h3>{textLabel}</h3>
       </div>
+    </a>
   )
 }
 
@@ -36,9 +42,9 @@ ListItem.PropTypes = {
   }
 
 
-  export const Icon = (props) => {
+  export const Icon = ({svgIcon}) => {
     return (
-        <SVGInline component='div' className={styles.icon} svg={props.svgIcon} />
+        <SVGInline component='div' className={styles.icon} svg={svgIcon} />
     )
   }
 

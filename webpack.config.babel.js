@@ -29,7 +29,7 @@ module.exports = {
 module: {
   rules: [
     {
-      test: /\.sass$/ , use: [
+      test: /\.scss$/ , use: [
 
         {
           loader: 'style-loader'

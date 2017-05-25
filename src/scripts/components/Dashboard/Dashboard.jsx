@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import Data from '../Data.js'
+import React, { Component } from 'react';
+import Data from '../Data.js';
 import {CDashboard,
         Header,
         List,
         ListItem,
-        Icon} from './c/CDashboard.jsx'
+        Icon} from './c/CDashboard.jsx';
 
 
 
 class DashBoard extends React.Component{
 
   render(){
-    const {listItems} = Data
-    const {header} = Data
+    const {listItems} = Data;
+    const {header} = Data;
 
     return (
       <CDashboard>
