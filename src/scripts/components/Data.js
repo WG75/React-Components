@@ -35,4 +35,4 @@ export default {
     text: 'Portfolio',
     icon: require('../../icons/search.svg')
   }
-}
+};

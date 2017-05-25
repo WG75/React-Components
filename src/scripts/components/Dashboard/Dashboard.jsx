@@ -22,13 +22,14 @@ class DashBoard extends React.Component{
             listItems.map((item) => {
               return (
                 <ListItem key={item.label} textLabel={item.label} icon={item.icon} />
-              )
+              );
             })
           }
         </List>
       </CDashboard>
-    )
-  }
-}
+    );
+  };
+  
+};
 
-export default DashBoard
+export default DashBoard;

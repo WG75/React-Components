@@ -14,13 +14,13 @@ export const Header = ({text, icon}) => {
         <Icon className={'searchIcon'} svgIcon={icon}/>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Header.PropTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired
-}
+};
 
 
 
@@ -33,25 +33,25 @@ export const ListItem = ({icon, textLabel}) => {
         <h3 className={styles.listItemText}>{textLabel}</h3>
       </div>
     </a>
-  )
-}
+  );
+};
 
 ListItem.PropTypes = {
     textLabel: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     clssName: PropTypes.string.isRequired
-  }
+  };
 
 
   export const Icon = ({svgIcon, className}) => {
     return (
         <SVGInline component='div' className={styles[className]} svg={svgIcon} />
-    )
-  }
+    );
+  };
 
   Icon.PropTypes = {
     svgIcon: PropTypes.string.isRequired
-  }
+  };
 
 
   export const List = ({children}) => {
@@ -59,8 +59,8 @@ ListItem.PropTypes = {
       <div className={styles.list}>
         {children}
       </div>
-    )
-  }
+    );
+  };
 
 
 
@@ -69,9 +69,9 @@ export const CDashboard = ({children}) => {
     <div className={styles.dashboard}>
       {children}
     </div>
- )
-}
+ );
+};
 
 
 
-export default CDashboard
+export default CDashboard;
