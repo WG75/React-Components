@@ -17,7 +17,7 @@
 
 
 module.exports = {
-  entry: './src/scripts/App.js',
+  entry: './src/scripts/App.jsx',
 
   output: {
     filename: 'app.js',
@@ -28,9 +28,28 @@ module.exports = {
 
 module: {
   rules: [
-
     {
-      test: /\.sass$/ , use: extractCss.extract(['css-loader' ,'sass-loader'])
+      test: /\.sass$/ , use: [
+
+        {
+          loader: 'style-loader'
+        },
+
+        {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          importLoaders: 1,
+          localIdentName: '[local]___[hash:base64:5]'
+        }
+      },
+        {
+          loader: 'sass-loader'
+        }
+      ]
+    },
+    {
+      test: /\.jsx$/, exclude: /node_modules/  ,use: 'babel-loader'
     },
 
     {
