@@ -17,28 +17,9 @@
 
 
 .list {
-
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-
-  a {
-    text-decoration: none;
-    padding: 0 28px;
-    display: flex;
-    flex: 1;
-    &:hover{
-      background: rgba($c-white, 0.5);
-    .listItem{
-        border-color: transparent;
-      }
-      svg{
-        path {
-          fill: inherit;
-        }
-      }
-    }
-  }
 }
 
 .listItem {
@@ -48,67 +29,86 @@
   border-bottom: 5px solid $c-listitem-border;
   line-height: 1.15;
   color: $c-listitem-textcolor;
-  h3 {
-    margin-left: 25px;
-  }
-
+  min-height: 79px;
 }
+
+.listItemText {
+  margin-left: 25px;
+}
+
+
+.listItemWrapper {
+  text-decoration: none;
+  padding: 0 28px;
+  display: flex;
+  flex: 1;
+  &:hover{
+    background: rgba($c-white, 0.5);
+  .listItem{
+      border-color: transparent;
+      color: $c-black;
+    }
+    svg{
+      path {
+        fill: inherit;
+      }
+    }
+  }
+}
+
 
 
 .icon {
   flex-shrink: 0;
   width: 48px;
   height: auto;
-  svg {
-
-    path {
-      fill: $c-white;
-    }
-  }
 
   @media (max-width: 1420px) and (min-width: 768px) {
     width: 32px;
   }
-
 }
 
+
+svg {
+  path {
+    fill: $c-white;
+  }
+}
 
 
 .headerWrapper{
   padding:  24px 28px 0;
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid $c-headline-border;
-
-    h3{
-      color: $c-white;
-    }
-
-    .icon {
-
-        cursor: pointer;
-        order: 1;
-        width: 25px;
-        height: auto;
-
-        svg {
-            fill: $c-white;
-            path{
-              fill: inherit
-            }
-            &:hover {
-            fill: #000;
-          }
-        }
-
-        @media (max-width: 1420px) and (min-width: 768px){
-          width: 20px;
-        }
-    }
-
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid $c-headline-border;
+}
+
+.headline{
+  color: $c-white;
+}
+
+
+.searchIcon {
+    cursor: pointer;
+    order: 1;
+    width: 25px;
+    height: auto;
+
+    svg {
+        fill: $c-white;
+        path {
+          fill: inherit;
+        }
+        &:hover {
+        fill: #000;
+      }
+    }
+
+    @media (max-width: 1420px) and (min-width: 768px){
+      width: 20px;
+    }
 }

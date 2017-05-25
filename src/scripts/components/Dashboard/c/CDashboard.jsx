@@ -10,8 +10,8 @@ export const Header = ({text, icon}) => {
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.header}>
-        <h3>{text}</h3>
-        <Icon svgIcon={icon}/>
+        <h3 className={styles.headline}>{text}</h3>
+        <Icon className={'searchIcon'} svgIcon={icon}/>
       </div>
     </div>
   )
@@ -27,10 +27,10 @@ Header.PropTypes = {
 export const ListItem = ({icon, textLabel}) => {
 
   return (
-    <a href="">
+    <a href="#" className={styles.listItemWrapper}>
       <div className={styles.listItem}>
-        <Icon svgIcon={icon}/>
-        <h3>{textLabel}</h3>
+        <Icon className={'icon'} svgIcon={icon}/>
+        <h3 className={styles.listItemText}>{textLabel}</h3>
       </div>
     </a>
   )
@@ -38,13 +38,14 @@ export const ListItem = ({icon, textLabel}) => {
 
 ListItem.PropTypes = {
     textLabel: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired
+    icon: PropTypes.string.isRequired,
+    clssName: PropTypes.string.isRequired
   }
 
 
-  export const Icon = ({svgIcon}) => {
+  export const Icon = ({svgIcon, className}) => {
     return (
-        <SVGInline component='div' className={styles.icon} svg={svgIcon} />
+        <SVGInline component='div' className={styles[className]} svg={svgIcon} />
     )
   }
 
