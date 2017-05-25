@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "prestart": "webpack -p"
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
