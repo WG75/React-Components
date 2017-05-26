@@ -28,8 +28,8 @@ class DashBoard extends React.Component{
         </List>
       </CDashboard>
     );
-  };
-  
-};
+  }
+
+}
 
 export default DashBoard;

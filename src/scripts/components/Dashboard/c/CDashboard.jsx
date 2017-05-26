@@ -10,7 +10,7 @@ export const Header = ({text, icon}) => {
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.header}>
-        <h3 className={styles.headline}>{text}</h3>
+        <span className={styles.headline}>{text}</span>
         <Icon className={'searchIcon'} svgIcon={icon}/>
       </div>
     </div>
@@ -30,7 +30,7 @@ export const ListItem = ({icon, textLabel}) => {
     <a href="#" className={styles.listItemWrapper}>
       <div className={styles.listItem}>
         <Icon className={'icon'} svgIcon={icon}/>
-        <h3 className={styles.listItemText}>{textLabel}</h3>
+        <span className={styles.listItemText}>{textLabel}</span>
       </div>
     </a>
   );

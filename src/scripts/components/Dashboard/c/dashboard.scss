@@ -26,9 +26,9 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
-  border-bottom: 3px solid $c-listitem-border;
+  border-bottom: 3px solid rgba($c-white, .07);
   line-height: 1.15;
-  color: $c-listitem-textcolor;
+  color: rgba($c-white, .6);
   min-height: 79px;
 }
 
@@ -42,13 +42,13 @@
   padding: 0 28px;
   display: flex;
   flex: 1;
-  &:hover{
+  &:hover {
     background: rgba($c-white, 0.5);
   .listItem{
       border-color: transparent;
       color: $c-black;
     }
-    svg{
+    svg {
       path {
         fill: inherit;
       }
@@ -70,13 +70,14 @@
 
 
 svg {
-  path {
+  path,
+  rect {
     fill: $c-white;
   }
 }
 
 
-.headerWrapper{
+.headerWrapper {
   padding:  24px 28px 0;
 }
 
@@ -84,10 +85,11 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid $c-headline-border;
+  border-bottom: 3px solid rgba($c-white, .3);
+  padding: 0 12px;
 }
 
-.headline{
+.headline {
   color: $c-white;
 }
 
@@ -98,13 +100,10 @@ svg {
     width: 25px;
     height: auto;
 
-    svg {
-        fill: $c-white;
-        path {
-          fill: inherit;
-        }
-        &:hover {
-        fill: #000;
+    svg:hover {
+      path,
+      rect {
+        fill: initial;
       }
     }
 
