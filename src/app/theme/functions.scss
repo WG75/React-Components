@@ -1,0 +1,42 @@
+/*
+ * Functions helpers
+ */
+
+
+// Get width of named breakpoints
+
+@function getBpWidth($bp-name) {
+	@return map-get(map-get($bps, $bp-name), width);
+}
+
+
+// Get gap of named breakpoints
+
+@function getBpGap($bp-name) {
+	@return map-get(map-get($bps, $bp-name), gap);
+}
+
+
+// Get number of col of named breakpoints
+
+@function getBpCols($bp-name) {
+	@return map-get(map-get($bps, $bp-name), cols);
+}
+
+@function getBpOrient($bp-name) {
+	@return map-get(map-get($bps, $bp-name), orientation);
+}
+
+
+@function getColWidthAtBp($cols, $gaps, $bp){
+	$width: 100% * $cols;
+	$bp-gap: getBpGap($bp);
+	$gap: $bp-gap * $gaps - $bp-gap * $cols;
+	$value: null;
+	@if $width != 0 {
+		$value: if($gap != 0, calc(#{$width} + #{$gap + px}), $width);
+	} @else {
+		$value: $gap + px;
+	}
+	@return $value;
+}

@@ -1,0 +1,158 @@
+@import "../../../theme/vars";
+@import "../../../theme/mixins";
+
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-size: 16px;
+	padding-bottom: 79px;
+	padding-top: 10px;
+	@include above((tp, portrait), (tl, landscape)) {
+		font-size: 13px;
+		padding-bottom: 0;
+	}
+	@include above(dl, landscape) {
+		font-size: 14px;
+	}
+	@include above(dw, landscape) {
+		font-size: 16px;
+	}
+}
+
+.list {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.listItemWrapper {
+	text-decoration: none;
+	padding: 0 28px;
+	display: flex;
+	min-height: 73px;
+	max-height: 99px;
+	flex-grow: 1;
+	&:hover {
+		@include above((tp, portrait), (tl, landscape)) {
+			background: $c-white;
+			.listItem {
+				border-color: transparent;
+				color: $c-black;
+			}
+		}
+	}
+}
+
+.listItem {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	border-bottom: 3px solid rgba($c-white, .07);
+	margin-bottom: -3px;
+	line-height: 1.15;
+	/*color: rgba($c-white, .6);*/
+	color: $c-white;
+	padding: 0 10px;
+}
+
+.listItemText {
+	margin-left: 12px;
+	overflow: hidden;
+	max-height: 36px;
+	@include above((tp, portrait), (tl, landscape)) {
+		max-height: 28px;
+	}
+	@include above(dl, landscape) {
+		max-height: 32px;
+	}
+	@include above(dw, landscape) {
+		max-height: 36px;
+	}
+
+}
+
+.icon {
+	flex-shrink: 0;
+	width: 48px;
+	height: 48px;
+	svg {
+		width: 100%;
+		height: 100%;
+		path {
+			@include above((tp, portrait), (tl, landscape)) {
+				.listItemWrapper:not(:hover) & {
+					fill: $c-white;
+				}
+			}
+			@include below((tp, portrait), (tl, landscape)) {
+				.listItemWrapper & {
+					fill: $c-white;
+				}
+			}
+		}
+	}
+	@include above((tp, portrait), (tl, landscape)) {
+		width: 32px;
+		height: 32px;
+	}
+	@include above(dl, landscape) {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+.headerWrapper {
+	padding: 24px 28px 0;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 3px solid rgba($c-white, .3);
+	margin-bottom: -3px;
+}
+
+.headline {
+	color: $c-white;
+	@include above((tp, portrait), (tl, landscape)) {
+		font-size: 13px;
+	}
+	@include above(dl, landscape) {
+		font-size: 14px;
+	}
+	@include above(dw, landscape) {
+		font-size: 16px;
+	}
+}
+
+.searchIcon {
+	cursor: pointer;
+	order: 1;
+	width: 25px;
+	height: 25px;
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		path {
+			fill: $c-white;
+		}
+	}
+	&:hover{
+		svg {
+			path {
+				fill: #00b9af;
+			}
+		}
+	}
+	@include above((tp, portrait), (tl, landscape)) {
+		width: 20px;
+		height: 20px;
+	}
+	@include above(dw, landscape) {
+		width: 25px;
+		height: 25px;
+	}
+}

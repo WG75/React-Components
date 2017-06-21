@@ -1,0 +1,201 @@
+/*
+ *  Colors
+ */
+
+$c-black: #000;
+$c-white: #fff;
+$c-snowwhite: #E6E6E8;
+
+$c-blueblack: #000a28;
+$c-bluecobalt: #003c64;
+$c-bluenight: #005096;
+$c-blueselect: #327dcd;
+
+$c-blueLink: #507db4; // huge changes needed
+
+$c-bluelinkhover: #4673af;
+$c-bluehighlight: #64a5e6;
+$c-bluelight: #d2d7ff;
+
+
+$c-body: #2d323c;
+$c-greytext: #505a64;
+$c-greylogo: #646e78;
+$c-grey: #87919b;
+$c-greylight: #aab4be;
+$c-greylightgroupnav: #aaaab4;
+$c-greyborder: #c8cdd2;
+$c-greylightest: #e6ecf2;
+$c-greymidlightest: #edf2f7;
+$c-greysuperlight: #f6f7f8;
+
+$c-green: #00964a;
+
+$c-red: #d70033;
+$c-red-pdf: #f00000;
+
+
+$ff-head: 'purista-web', sans-serif;
+$ff-body: 'proxima-nova', sans-serif;
+
+
+/*
+ *  Media breakpoints
+ */
+
+$bps: (
+	// Mobile Portrait
+	mm: (
+		width: 0,
+		orientation: portrait,
+		cols: 8,
+		gap: 8,
+		sidenav: 0%,
+		sidesubnav: 0%,
+		main-left: 0%,
+		head: 0%,
+		aside: 0%,
+		sidebar-part: 0%,
+		main-right: 0%,
+	),
+	// Mobile Landscape
+	ml: (
+		width: 480,
+		orientation: landscape,
+		cols: 8,
+		gap: 16,
+		sidenav: 0%,
+		sidesubnav: 0%,
+		main-left: 0%,
+		head: 0%,
+		aside: 0%,
+		sidebar-part: 0%,
+		main-right: 0%,
+	),
+	// Mobile Landscape
+	mw: (
+		width: 568,
+		orientation: landscape,
+		cols: 8,
+		gap: 16,
+		sidenav: 0%,
+		sidesubnav: 0%,
+		main-left: 0%,
+		head: 0%,
+		aside: 0%,
+		sidebar-part: 0%,
+		main-right: 0%,
+	),
+	// Tablet Portrait
+	tp: (
+		width: 768,
+		orientation: portrait,
+		cols: 12,
+		gap: 12,
+		sidenav: 0%,
+		sidesubnav: 0%,
+		main-left: 0%,
+		head: 41%,
+		aside: 33.33%,
+		sidebar-part: 0%,
+		main-right: 0%,
+	),
+	// High portrait
+	hp: (
+		width: 960,
+		orientation: portrait,
+		cols: 12,
+		gap: 12,
+		sidenav: 0%,
+		sidesubnav: 0%,
+		main-left: 0%,
+		head: 41%,
+		aside: 33.33%,
+		sidebar-part: 0%,
+		main-right: 0%,
+	),
+	// Tablet Landscape
+	tl: (
+		width: 1020,
+		orientation: landscape,
+		cols: 18,
+		gap: 12,
+		sidenav: 18%,
+		sidesubnav: 18%,
+		main-left: 4%,
+		head: 30%,
+		aside: 30%,
+		sidebar-part: 0%,
+		main-right: 4%,
+	),
+	// Tablet Widescreen
+	tw: (
+		width: 1260,
+		orientation: landscape,
+		cols: 18,
+		gap: 16,
+		sidenav: 15%,
+		sidesubnav: 15%,
+		main-left: 4%,
+		head: 24%,
+		aside: 22%,
+		sidebar-part: 16%,
+		main-right: 4%,
+	),
+	// Desktop Laptop
+	dl: (
+		width: 1420,
+		orientation: landscape,
+		cols: 18,
+		gap: 16,
+		sidenav: 14%,
+		sidesubnav: 14%,
+		main-left: 5%,
+		head: 24%,
+		aside: 23%,
+		sidebar-part: 15%,
+		main-right: 5%,
+	),
+	// Desktop Widescreen
+	dw: (
+		width: 1644,
+		orientation: landscape,
+		cols: 18,
+		gap: 24,
+		sidenav: 14%,
+		sidesubnav: 14%,
+		main-left: 5%,
+		head: 25%,
+		aside: 24%,
+		sidebar-part: 13%,
+		main-right: 5%,
+	),
+	// High Definition
+	hd: (
+		width: 1902,
+		orientation: landscape,
+		cols: 18,
+		gap: 30,
+		sidenav: 14%,
+		sidesubnav: 14%,
+		main-left: 6%,
+		head: 25%,
+		aside: 23%,
+		sidebar-part: 12%,
+		main-right: 6%,
+	),
+	// Extra Wide
+	xw: (
+		width: 2540,
+		orientation: landscape,
+		cols: 18,
+		gap: 30,
+		sidenav: 14%,
+		sidesubnav: 14%,
+		main-left: 5%,
+		head: 35%,
+		aside: 18%,
+		sidebar-part: 9%,
+		main-right: 5%,
+	)
+);

@@ -1,0 +1,97 @@
+@import './vars.scss';
+@import './functions.scss';
+/*
+ * Set of mixins
+ */
+
+
+// Prints props which values are calculated according to passed arguments:
+@mixin propBetweenBp($prop, $value, $bp-from, $bp-to) {
+	@include between($bp-from, $bp-to, getBpOrient($bp)) {
+		#{$prop}: $value;
+	}
+}
+
+@mixin propAboveBp($prop, $value, $bp) {
+	@include above($bp, getBpOrient($bp)) {
+		#{$prop}: $value;
+	}
+}
+
+//	$prop — property which will be printed
+//	$cols — number of columns
+@mixin propByBp($props-by-bps){
+	@each $bp, $props in $props-by-bps {
+		@if $bp == mm {
+			@each $prop, $val in $props {
+				#{$prop}: $val;
+			}
+		} @else {
+			@include above($bp, getBpOrient($bp)) {
+				@each $prop, $val in $props {
+					#{$prop}: $val;
+				}
+			}
+		}
+	}
+}
+
+
+@function media($bp-name, $query, $orient: false){
+	$width: getBpWidth($bp-name);
+	$width: if($query != max-width, $width, $width - 1);
+	$media-string: "(#{unquote($query)}: #{$width}px)";
+	@return if($orient, $media-string + " and (orientation: #{$orient})", $media-string);
+}
+@mixin media-query($args, $query){
+	$media: null;
+	@if type-of(nth($args,1)) == list {
+		$comma: false;
+		@each $bp, $orient in $args {
+			$media: if($comma, unquote("#{$media},"), $media);
+			$media: $media unquote(media($bp, $query, $orient));
+			$comma: true;
+		}
+	} @else {
+		$bp: nth($args,1);
+		$orient: if(length($args) > 1, nth($args,2), false);
+		$media: $media unquote(media($bp, $query, $orient));
+	}
+
+	@media all and #{$media} {
+		@content;
+	}
+}
+@mixin above($args...) {
+	@include media-query($args, "min-width"){
+		@content;
+	}
+}
+
+@mixin below($args...) {
+	@include media-query($args, "max-width"){
+		@content;
+	}
+}
+
+@mixin between($bp-from, $bp-to, $orient) {
+	$media: 'all';
+	$media: $media + ' and ' + unquote(media($bp-from, 'min-width'));
+	$media: $media + ' and ' + unquote(media($bp-to, 'max-width', $orient));
+	@media #{$media} {
+		@content;
+	}
+}
+
+
+
+@mixin fadeOut($duration: .25s, $delay: 0s){
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity #{$duration} ease #{$delay}, visibility #{$delay} linear #{$duration};
+}
+@mixin fadeIn($duration: .25s, $delay: 0s) {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity #{$duration} ease #{$delay}, visibility #{$duration} ease #{$delay};
+}

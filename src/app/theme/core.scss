@@ -1,0 +1,70 @@
+@import './vars';
+@import './mixins';
+@import 'normalize.css/normalize.css';
+/*@import './fonts';*/
+
+:global{
+	* {
+		box-sizing: border-box;
+	}
+	html{
+		overflow-y: scroll;
+	}
+	body,input,textarea,select,button {
+		font-synthesis:none;
+		text-rendering:optimizeLegibility;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		-moz-font-feature-settings:'liga', 'kern';
+		direction:ltr;
+		text-align:left;
+		font-family: $ff-body;
+	}
+	[type],textarea,select,button{
+		-webkit-appearance: none;
+		border-radius: 0;
+		&:focus{
+			outline: none;
+		}
+		&::-ms-clear {
+	    	display: none;
+		}
+	}
+	body{
+		font-size: 16px;
+		line-height: 1.5;
+		background-color: $c-body;
+		@include above(dw, landscape) {
+			font-size: 18px;
+		}
+	}
+	h2 {
+		font-size: 22px;
+		line-height: 1.33333;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h4 {
+		font-size: 18px;
+	}
+
+	a{
+		text-decoration: none;
+		outline: none;
+		&:link, &:hover, &:active, &:visited {
+			text-decoration: initial;
+			outline: none;
+		}
+	}
+	button{
+		background: none;
+		border: none;
+		padding: 0;
+		outline: none;
+		cursor: pointer;
+	}
+	img{
+		filter: blur(0px);
+	}
+}
