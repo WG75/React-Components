@@ -1,0 +1,61 @@
+@import '../../../theme/vars';
+@import '../../../theme/mixins';
+
+.prodItemWrapper {
+    min-width: 256px;
+    min-height: 352px;
+    background: $c-white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.imageContainer {
+    max-width: 512px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.productImg {
+    max-width: 100%;
+}
+
+.prodCategory {
+    color: $c-tilelist-color;
+}
+
+.tileList {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    background: $c-tilelist-bg;
+    @include fadeOut;
+}
+
+.tileItem {
+    padding: 15px 0;
+    border-bottom: 3px solid rgba($c-white, 0.2);
+}
+
+.itemTile {
+    display: block;
+    color: $c-black;
+}
+
+.itemValue {
+    font-weight: 700;
+    color: $c-white;
+}
+@media screen and (min-width: 1240px) {
+    .prodItemWrapper:hover {
+        .tileList {
+            @include fadeIn
+        }
+    }
+}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './productitem.scss';
 
 export const CProdCategory = ({category}) => (
-    <h3 className={styles.category}>{category}</h3>
+    <h3 className={styles.prodCategory}>{category}</h3>
 );
 
 CProdCategory.PropTypes = {
@@ -12,7 +12,7 @@ CProdCategory.PropTypes = {
 
 export const CProdImage = ({img}) => (
     <div className={styles.imageContainer}>
-        <img src={img} alt="product item image"/>
+        <img className={styles.productImg} src={img} alt="product item image"/>
     </div>
 );
 
@@ -21,7 +21,7 @@ CProdImage.PropTypes = {
 };
 
 export const CProdName = ({title}) => (
-    <h2>{title}</h2>
+    <h2 className={styles.prodName}>{title}</h2>
 );
 
 CProdName.PropTypes = {
@@ -37,9 +37,9 @@ CProdDescription.PropTypes = {
 };
 
 export const CTileItem = ({title, value}) => (
-    <li>
-        <span>{title}</span>
-        <span>{value}</span>
+    <li className={styles.tileItem}>
+        <span className={styles.itemTile}>{title}</span>
+        <span className={styles.itemValue}>{value}</span>
     </li>
 );
 
@@ -49,7 +49,7 @@ CTileItem.PropTypes = {
 };
 
 export const CTileList = ({items}) => (
-	<CList>
+    <CList>
         {items.map((item, key) => (<CTileItem key={key} {...item}/>))}
     </CList>
 );

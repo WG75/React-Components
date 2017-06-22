@@ -10,8 +10,24 @@ const prodProps = {
     description: 'some text about the product item',
     items: [
         {
-            title: 'namefeature',
-            value: 'quality'
+            title: 'NenngrÖße',
+            value: 'Q3 1,6 ... 25 m3/h'
+        },
+        {
+          title: 'Nennweite',
+          value: 'DN 15 ... 50 mm'
+        },
+        {
+          title: 'Zulassung',
+          value: 'MID R 400'
+        },
+        {
+          title: 'Temperaturbereich',
+          value: '5 ... 50C'
+        },
+        {
+          title: 'Schnittstellen',
+          value: 'Funk/M-Bus/Puls/L-Bus'
         }
     ]
 };
