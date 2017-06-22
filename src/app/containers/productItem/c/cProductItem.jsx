@@ -2,63 +2,63 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './productitem.scss';
 
-export const ProdCategory = ({category}) => (
+export const CProdCategory = ({category}) => (
     <h3 className={styles.category}>{category}</h3>
 );
 
-ProdCategory.PropTypes = {
+CProdCategory.PropTypes = {
     category: PropTypes.string.isRequired
 };
 
-export const ProdImage = ({img}) => (
+export const CProdImage = ({img}) => (
     <div className={styles.imageContainer}>
         <img src={img} alt="product item image"/>
     </div>
 );
 
-ProdImage.PropTypes = {
+CProdImage.PropTypes = {
     img: PropTypes.string.isRequired
 };
 
-export const ProdName = ({name}) => (
-    <h2>{name}</h2>
+export const CProdName = ({title}) => (
+    <h2>{title}</h2>
 );
 
-ProdName.PropTypes = {
+CProdName.PropTypes = {
     name: PropTypes.string.isRequired
 };
 
-export const ProdDescription = ({description}) => (
+export const CProdDescription = ({description}) => (
     <p>{description}</p>
 );
 
-ProdDescription.PropTypes = {
+CProdDescription.PropTypes = {
     description: PropTypes.string.isRequired
 };
 
-export const TileItem = ({feature, degree}) => (
+export const CTileItem = ({title, value}) => (
     <li>
-        <span>{feature}</span>
-        <h1>{degree}</h1>
+        <span>{title}</span>
+        <span>{value}</span>
     </li>
 );
 
-TileItem.PropTypes = {
+CTileItem.PropTypes = {
     feature: PropTypes.string.isRequired,
     degree: PropTypes.string.isRequired
 };
 
-export const TileList = ({items}) => (
-    <List>
-        {items.map(item => (<TileItem key={item} feature={item.feature} degree={item.degree}/>))}
-    </List>
+export const CTileList = ({items}) => (
+	<CList>
+        {items.map((item, key) => (<CTileItem key={key} {...item}/>))}
+    </CList>
 );
 
-TileList.PropTypes = {
+CTileList.PropTypes = {
     items: PropTypes.array.isRequired
 };
 
-export const List = ({children}) => (
+export const CList = ({children}) => (
     <div className={styles.tileList}>
         <ul>
             {children}
@@ -66,7 +66,7 @@ export const List = ({children}) => (
     </div>
 );
 
-export const CproductItem = ({children}) => (
+export const CProductItem = ({children}) => (
     <div className={styles.prodItemWrapper}>
         {children}
     </div>

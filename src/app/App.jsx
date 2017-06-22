@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './theme/core.scss';
-import {ProductItem} from './containers/productItem/productItem.jsx';
+import {ProductItem} from './containers/ProductItem/ProductItem.jsx';
 
 const prodProps = {
     category: 'optional category',
@@ -10,8 +10,8 @@ const prodProps = {
     description: 'some text about the product item',
     items: [
         {
-            feature: 'namefeature',
-            degree: 'quality'
+            title: 'namefeature',
+            value: 'quality'
         }
     ]
 };

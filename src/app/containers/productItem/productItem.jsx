@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {
-    CproductItem,
-    ProdCategory,
-    ProdImage,
-    ProdName,
-    ProdDescription,
-    TileList
-} from './c/cProductItem.jsx';
+    CProductItem,
+    CProdCategory,
+    CProdImage,
+    CProdName,
+    CProdDescription,
+    CTileList
+} from './c/CProductItem.jsx';
 
 export class ProductItem extends Component {
 
@@ -21,16 +21,16 @@ export class ProductItem extends Component {
 
     render() {
 
-        const {category, img, name, description, items} = this.props;
+        const {category, img, title, description, items} = this.props;
 
         return (
-            <CproductItem>
-                <ProdCategory category={category}/>
-                <ProdImage img={img}/>
-                <ProdName name={name}/>
-                <ProdDescription description={description}/>
-                <TileList items={items}/>
-            </CproductItem>
+            <CProductItem>
+                <CProdCategory category={category}/>
+                <CProdImage img={img}/>
+                <CProdName title={title}/>
+                <CProdDescription description={description}/>
+                <CTileList items={items}/>
+            </CProductItem>
         );
     }
 }
