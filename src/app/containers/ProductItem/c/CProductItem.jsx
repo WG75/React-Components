@@ -29,7 +29,7 @@ CProdName.PropTypes = {
 };
 
 export const CProdDescription = ({description}) => (
-    <p>{description}</p>
+    <p className={styles.prodDescription}>{description}</p>
 );
 
 CProdDescription.PropTypes = {

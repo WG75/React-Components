@@ -5,7 +5,7 @@
     min-width: 256px;
     min-height: 352px;
     background: $c-white;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -19,12 +19,25 @@
     align-self: center;
 }
 
+.prodName {
+    font-size: 20px;
+    line-height: 48px;
+    margin: 0;
+}
+
 .productImg {
     max-width: 100%;
 }
 
 .prodCategory {
     color: $c-tilelist-color;
+    margin: 0;
+}
+
+.prodDescription {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
 }
 
 .tileList {
