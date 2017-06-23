@@ -68,6 +68,8 @@ export const CList = ({children}) => (
 
 export const CProductItem = ({children}) => (
     <div className={styles.prodItemWrapper}>
-        {children}
+        <div className={styles.prodItemContainer}>
+          {children}
+        </div>
     </div>
 );

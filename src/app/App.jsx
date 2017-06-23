@@ -4,10 +4,8 @@ import './theme/core.scss';
 import {ProductItem} from './containers/ProductItem/ProductItem.jsx';
 
 const prodProps = {
-    category: 'optional category',
+    category: 'Optional category',
     title: 'product name',
-    img: '/../_temp/products/metering-product-dummy-01.jpg',
-    description: 'some text about the product item',
     items: [
         {
             title: 'NenngrÖße',
@@ -32,4 +30,36 @@ const prodProps = {
     ]
 };
 
-ReactDOM.render(<ProductItem {...prodProps}/>, document.getElementById('root'));
+
+
+
+
+
+
+//test image containers
+
+const items = [
+                {
+                  image: '/dist/test1.jpg',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                },
+                {
+                  image: '/dist/test2.jpg',
+                  description: 'not enough text about the product description'
+                },
+                {
+                  image: '/dist/test3.jpg',
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                }
+                ]
+
+const ListOfProducts = ({items, description}) => (
+  <div>
+    {items.map((item => {
+      return <ProductItem {...prodProps} img={item.image}  description={item.description}/>
+    }))}
+  </div>
+);
+
+
+ReactDOM.render(<ListOfProducts items={items} />, document.getElementById('root'));
