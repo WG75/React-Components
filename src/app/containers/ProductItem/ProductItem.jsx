@@ -21,13 +21,13 @@ export class ProductItem extends Component {
 
     render() {
 
-        const {category, img, title, description, items} = this.props;
+        const {category, img, name, description, items} = this.props;
 
         return (
             <CProductItem>
                 <CProdCategory category={category}/>
                 <CProdImage img={img}/>
-                <CProdName title={title}/>
+                <CProdName title={name}/>
                 <CProdDescription description={description}/>
                 <CTileList items={items}/>
             </CProductItem>

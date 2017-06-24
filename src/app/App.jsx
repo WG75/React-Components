@@ -7,7 +7,7 @@ import prodData from './data/ProductItems.js';
 const ListOfProducts = ({products}) => (
   <div>
     {products.map((item => {
-      return <ProductItem {...item}/>
+      return <ProductItem key={item.name} {...item}/>
     }))}
   </div>
 );
