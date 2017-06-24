@@ -22,9 +22,7 @@ module.exports = {
 
 	output: {
 		filename: 'app.js',
-		path: path.join(__dirname, paths.dist),
-		publicPath: '/dist/'
-
+		path: path.join(__dirname, paths.dist)
 	},
 
 	module: {
@@ -61,7 +59,9 @@ module.exports = {
 	devServer: {
 		port: 3000,
 		open: true,
-		stats: 'errors-only'
+		stats: 'errors-only',
+		contentBase: path.resolve(__dirname, '_temp/products/'),
+		publicPath: '/'
 	}
 
 }

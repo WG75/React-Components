@@ -5,7 +5,6 @@
     min-width: 256px;
     min-height: 452px;
     background: $c-white;
-    padding: 15px 12px;
     display: flex;
 }
 
@@ -71,6 +70,7 @@
 .itemTile {
     display: block;
     color: $c-black;
+    font-size: 14px;
 }
 
 .itemValue {
@@ -78,9 +78,6 @@
     color: $c-white;
 }
 @media screen and (min-width: 1240px) {
-    .prodItemWrapper {
-        padding: 0;
-    }
 
     .prodItemContainer {
         border: none;
