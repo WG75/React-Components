@@ -12,7 +12,11 @@ CProdCategory.PropTypes = {
 
 export const CProdImage = ({img}) => (
     <div className={styles.imageContainer}>
-        <img className={styles.productImg} src={img} alt="product item image"/>
+      <div className={styles.fluidContainer}>
+        <div className={styles.prodImgContainer}>
+          <img className={styles.prodImg} src={img} alt="product item image"/>
+        </div>
+      </div>
     </div>
 );
 
@@ -37,10 +41,10 @@ CProdDescription.PropTypes = {
 };
 
 export const CTileItem = ({title, value}) => (
-    <li className={styles.tileItem}>
+    <div className={styles.tileItem}>
         <span className={styles.itemTile}>{title}</span>
         <span className={styles.itemValue}>{value}</span>
-    </li>
+    </div>
 );
 
 CTileItem.PropTypes = {
@@ -60,9 +64,9 @@ CTileList.PropTypes = {
 
 export const CList = ({children}) => (
     <div className={styles.tileList}>
-        <ul>
+        <div>
             {children}
-        </ul>
+        </div>
     </div>
 );
 
