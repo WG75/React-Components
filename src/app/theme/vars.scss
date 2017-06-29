@@ -35,16 +35,64 @@ $c-red: #d70033;
 $c-red-pdf: #f00000;
 
 
+
+/*
+ *  Corporate colors
+ */
+
+$c-corp: (
+	gruppe: (
+		dark:  #0096dc,
+		bright: #4ac8ff,
+		alt-dark: #96969b,
+		alt-bright: #96969b,
+	),
+    group: (
+        dark:  #0096dc,
+        bright: #0096dc,
+        alt-dark: #96969b,
+        alt-bright: #96969b,
+    ),
+	metall: (
+		dark: #eb8200,
+		bright: #ff8c1e,
+	),
+	controls: (
+		dark: #00b4c8,
+		bright: #00e1ff,
+	),
+	defence: (
+		dark: #507db4,
+		bright: #64afff,
+	),
+	aerosystems: (
+		dark: #507db4,
+		bright: #64afff,
+	),
+	metering: (
+		dark: #00b9af,
+		bright: #00ebdc,
+	),
+	beteiligungen: (
+		dark: #6e23a5,
+		bright: #7d19af,
+	),
+	affiliated: (
+		dark: #6e23a5,
+		bright: #7d19af,
+	)
+);
+
+
+/*
+ *  Fonts
+ */
+
+$fontpath: './fonts/';
+
 $ff-head: 'purista-web', sans-serif;
 $ff-body: 'proxima-nova', sans-serif;
-
-
-$c-image-container-bg: #ff00e4;
-$c-tilelist-bg: #00b4aa;
-$c-tilelist-color: #00b4aa;
-
-
-
+/*$ff-body-cond: 'proxima-nova-condensed', sans-serif;*/
 
 /*
  *  Media breakpoints

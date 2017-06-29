@@ -1,0 +1,93 @@
+@import '../../../theme/vars';
+@import '../../../theme/placeholders';
+@import '../../../theme/mixins';
+
+.selectbox{
+	position: relative;
+	border: 1px solid $c-greyborder;
+	background-color: rgba($c-greymidlightest, .5);
+	height: 44px;
+	select {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		@include above(tp, portrait){
+			display: none;
+		}
+	}
+}
+.toggler{
+	font-size: 14px;
+	/*line-height: 18px;*/
+	height: 100%;
+	width: 100%;
+	padding: 0 15px;
+	@include propInCompany(dark, color);
+	@include above(tp, portrait){
+		width: auto;
+	}
+}
+.wrap{
+	display: flex;
+	align-items: center;
+}
+.placeholder{
+	flex-grow: 1;
+	padding-right: 12px;
+}
+.icon{
+	width: 16px;
+	height: 16px;
+}
+.up{
+	width: 16px;
+	height: 16px;
+	display: block;
+	margin: auto;
+	transform: rotate(-180deg);
+	svg{
+		display: block;
+		width: 100%;
+		height: 100%;
+		@include propInCompany(dark, fill);
+	}
+}
+.down{
+	@extend .up;
+	transform: rotate(0deg);
+}
+.dropdown{
+	position: absolute;
+	top: -12px;
+	right: 0;
+	display: none;
+	background-color: $c-white;
+	z-index: 10;
+	padding: 12px 32px;
+	box-shadow: 0 0 32px rgba($c-black, .1);
+	@include fadeOut;
+	@include above(tp, portrait){
+		display: block;
+	}
+	&-open{
+		@extend .dropdown;
+		@include fadeIn;
+	}
+	&-item{
+		font-size: 14px;
+		line-height: 18px;
+		white-space: nowrap;
+		display: block;
+		width: 100%;
+		height: 48px;
+		text-align: right;
+		color: $c-black;
+		&-active{
+			@extend .dropdown-item;
+			color: $c-blueLink;
+		}
+	}
+}

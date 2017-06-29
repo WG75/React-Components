@@ -1,4 +1,4 @@
-@import './vars.scss';
+$media: null;@import './vars.scss';
 @import './functions.scss';
 /*
  * Set of mixins
@@ -83,6 +83,73 @@
 	}
 }
 
+// Animated border mixin. Usage: `@include animatedBorder;` at any selector;
+
+@mixin animatedBorder($colors: ($c-greymidlightest, $c-blueLink), $border-width: 4px) {
+	$color-init: nth($colors, 1);
+	$color-hover: nth($colors, 2);
+	$selector: nth(&, 1);
+	@extend %animatedBorder;
+	&::before, &::after{
+		height: $border-width;
+		background-color: $color-init;
+	}
+	&::after{
+		transform: translateX(-101%);
+		background-color: $color-hover;
+	}
+	&-hovered, &-active{
+		@extend %animatedBorder;
+		&::before, &::after{
+			height: $border-width;
+			background-color: $color-init;
+		}
+		&::after{
+			transform: translateX(0);
+			background-color: $color-hover;
+		}
+	}
+}
+
+@mixin standard-gaps($prop) {
+	@each $key, $bp in $bps {
+		$width: map-get($bp, width);
+		$orient: map-get($bp, orientation);
+		$gap: map-get($bp, gap);
+		$value: if($prop == 'margin', -$gap, $gap);
+		$value: if($key == 'ml' or $key == 'mw', $value / 2, $value) + px;
+		@if $key == mm {
+			#{$prop}-left: $value;
+			#{$prop}-right: $value;
+		}
+		@else {
+			@media all and (min-width: #{$width}px) and (orientation: $orient) {
+				#{$prop}-left: $value;
+				#{$prop}-right: $value;
+			}
+		}
+	}
+}
+
+@mixin extended-gaps($prop) {
+	@each $key, $bp in $bps {
+		$width: map-get($bp, width);
+		$orient: map-get($bp, orientation);
+		$gap: map-get($bp, gap);
+		$value: if($prop == 'margin', -$gap, $gap);
+		$value: if($key == 'mm' or $key == 'tp', $value * 2, $value) + px;
+		@if $key == mm {
+			#{$prop}-left: $value;
+			#{$prop}-right: $value;
+		}
+		@else {
+			@media all and (min-width: #{$width}px) and (orientation: #{$orient}) {
+				#{$prop}-left: $value;
+				#{$prop}-right: $value;
+			}
+		}
+	}
+}
 
 
 @mixin fadeOut($duration: .25s, $delay: 0s){
@@ -94,4 +161,211 @@
 	opacity: 1;
 	visibility: visible;
 	transition: opacity #{$duration} ease #{$delay}, visibility #{$duration} ease #{$delay};
+}
+@mixin optimize3D(){
+	backface-visibility: hidden;
+	perspective: 1000;
+	transform-style: preserve-3d;
+}
+
+
+// font face mixin https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6#file-_mixins-scss
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+@mixin gridProps($element){
+
+	$prev-grid: ();
+	@each $key, $bp in $bps {
+		$width: map-get($bp, width);
+		$orient: map-get($bp, orientation);
+
+		$bp-sidenav: map-get($bp, sidenav);
+		$bp-sidesubnav: map-get($bp, sidesubnav);
+		$bp-main-left: map-get($bp, main-left);
+		$bp-head: map-get($bp, head);
+		$bp-aside: map-get($bp, aside);
+		$bp-sidebar-part: map-get($bp, sidebar-part);
+		$bp-main-right: map-get($bp, main-right);
+
+		$temp-main: $bp-head + $bp-aside + $bp-main-left + if($bp-sidebar-part == 0%, 0%, $bp-sidebar-part + $bp-main-right);
+		$temp-sidebar: if($bp-sidebar-part != 0%, $bp-sidebar-part + $bp-main-right, 0%);
+		$temp-carousel: if($bp-sidesubnav != 0%, 100% - $temp-sidebar, 100%);
+		$temp-container: 100% - ($bp-sidenav + $bp-aside) / $temp-carousel * 100%;
+		$temp-aside-in-carousel: $bp-aside / $temp-carousel * 100%;
+		$temp-aside-in-container: $temp-aside-in-carousel / $temp-container * 100%;
+
+		$temp-panel-left: if($temp-carousel != 0%, $temp-aside-in-container, 0%);
+		$temp-aside: if($temp-carousel != 0%, $bp-aside / ($temp-carousel - $bp-sidenav) * 100%, 0%);
+
+		$temp-head: if($temp-carousel != 0% and $temp-aside != 0%, $bp-head / ($temp-carousel - $bp-sidenav) * 100% / $temp-aside * 100%, 0%);
+		$temp-sidenav: $bp-sidenav + $bp-sidesubnav;
+
+		$grid: (
+			sidebar: (
+				width: $temp-sidebar
+			),
+			bg: (
+				right: $temp-sidebar
+			),
+			main: (
+				margin-left: $temp-sidenav,
+			),
+			content: (
+				margin-left: if($temp-main != 0%, $bp-main-left / $temp-main * 100%, 0%),
+				margin-right: if($temp-main != 0%, $bp-main-right / $temp-main * 100%, 0%),
+			),
+			carousel: (
+				width: if($temp-sidebar != 0, $temp-carousel, 100%)
+			),
+			container: (
+				width: if($temp-container != 0, $temp-container, 100%)
+			),
+			panel: (
+				margin-left: if($temp-aside != 0%, -$temp-panel-left, null),
+				width: if($temp-aside != 0%, 100% + $temp-panel-left, 100%),
+			),
+			head: (
+				width: $temp-head,
+				left: -$temp-head,
+			),
+			aside: (
+				width: $temp-aside,
+			),
+			header-tools: (
+				width: $bp-sidenav + $bp-sidesubnav,
+			),
+			nav-about: (
+				width: $bp-sidenav + $bp-sidesubnav + $bp-main-left,
+			),
+			header-mainnav: (
+				margin-left: $bp-main-left,
+				margin-right: $temp-sidebar,
+			),
+			sidenav: (
+				width: $temp-sidenav
+			),
+			sidenav-home: (
+				width: $bp-sidenav
+			)
+		);
+		$item: map-get($grid, $element);
+
+		@if $key == mm {
+
+			@each $prop, $val in $item {
+				@if $prop != width or ($prop == width and $val != 0%) {
+					#{$prop}: $val;
+				}
+			}
+
+		}
+		@else {
+
+			@media all and (min-width: #{$width}px) and (orientation: #{$orient}) {
+
+				@each $prop, $val in $item {
+					@if $prop != width or ($prop == width and $val != 0%) {
+						#{$prop}: $val;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@mixin extendByCompany($suffix: '') {
+	$selector: nth(&, 1);
+	@each $company, $types in $c-corp {
+		&-#{$company}#{$suffix} {
+			@extend #{$selector};
+			@content;
+		}
+	}
+}
+
+@mixin propByCompany($type, $prop, $pseudo: ''){
+	@each $company, $types in $c-corp {
+		$color: map-get($types, $type);
+
+		&-#{$company}#{$pseudo} {
+			#{$prop}: $color;
+		}
+	}
+}
+
+@mixin propInCompany($type, $prop){
+	@each $company, $types in $c-corp {
+		$color: map-get($types, $type);
+		:global .company-#{$company} :local & {
+			#{$prop}: $color;
+		}
+	}
+}
+
+
+@mixin animatedBorderByCompany($borderWidth, $suffix: ''){
+
+	@each $company, $types in $c-corp {
+		$color: map-get($types, dark);
+		&-#{$company}#{$suffix} {
+			@include animatedBorder(($c-greylightest, $color), $borderWidth);
+			@content;
+		}
+	}
+}
+
+@mixin animatedBorderInCompany($borderWidth, $defaultColor: $c-greylightest){
+	@each $company, $types in $c-corp {
+		$color: map-get($types, dark);
+		:global .company-#{$company} :local & {
+			@include animatedBorder(($defaultColor, $color), $borderWidth);
+			@content;
+		}
+	}
 }

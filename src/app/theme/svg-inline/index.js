@@ -6,3 +6,4 @@ export {default as svgMotor32}			from './32x32/motor.svg';
 export {default as svgService32}		from './32x32/service.svg';
 export {default as svgWater32}			from './32x32/water.svg';
 export {default as svgSearchPortfolio}	from './misc/portfolio-search.svg';
+export {default as svgArrow32}			from './32x32/slider-arrow.svg';

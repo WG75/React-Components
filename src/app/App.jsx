@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './theme/core.scss';
-import {ProductItem} from './containers/ProductItem/ProductItem.jsx';
-import prodData from './data/ProductItems.js';
+import Selectbox from './containers/Selectbox/Selectbox';
 
-const ListOfProducts = ({products}) => (
-  <div>
-    {products.map((item => {
-      return <ProductItem key={item.name} {...item}/>
-    }))}
-  </div>
-);
+const options = [{
+	id: 'id1',
+	title: 'Value 1'
+}, {
+	id: 'id2',
+	title: 'Value 2'
+}, {
+	id: 'id3',
+	title: 'Value 3'
+}];
 
-
-ReactDOM.render(<ListOfProducts products={prodData} />, document.getElementById('root'));
+ReactDOM.render((
+	<Selectbox {...{options, defaultId: options[0].id}} />
+), document.getElementById('root'));

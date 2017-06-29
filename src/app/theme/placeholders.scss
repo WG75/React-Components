@@ -1,0 +1,173 @@
+@import './vars';
+@import './mixins';
+
+/*
+ * Placeholder Selectors
+ * Usage: @extend %placeholder-selector
+ */
+
+// Micro clearfix selector placeholder.
+
+%clearfix {
+	&::before,
+	&::after {
+	    content: " ";
+	    display: table;
+	}
+	&::after {
+    	clear: both;
+	}
+}
+
+
+// Font selector placeholder for headlines.
+
+%ff-head {
+	font-family: $ff-head;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.025em;
+	line-height: 1.16666;
+}
+
+/*
+ * Grid
+ */
+
+// Row selector, creates margins for all breakpoints according to defined vars.
+
+%row {
+	@include standard-gaps(margin);
+}
+
+%row-extended {
+	@include extended-gaps(margin);
+}
+
+// Column selector, creates paddings for all breakpoints according to defined vars.
+
+%col {
+	@include standard-gaps(padding);
+}
+
+%col-extended {
+	@include extended-gaps(padding);
+}
+
+/* Helpers */
+
+%xpand {
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+%contentAbsXpand {
+	content: "";
+	position: absolute;
+	@extend %xpand;
+}
+
+/*
+ * Effects
+ */
+
+// Animated border placeholder
+
+%animatedBorder {
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	&::before, &::after{
+		@extend %contentAbsXpand;
+		top: auto;
+	}
+	&::after{
+		transition: transform .25s ease-in-out;
+	}
+}
+
+
+%carouselFlex {
+	display: flex;
+	/*overflow: hidden;*/
+}
+
+%carouselFlexItem {
+	flex-basis: 100%;
+	margin-right: -100%;
+	flex-shrink: 0;
+	width: 100%;
+}
+
+%sidebarPositiveGaps {
+	@include propByBp((
+		mm: (	padding-left: 24px, padding-right: 24px	),
+		tp: (	padding-left: 2.5%, padding-right: 2.5%	),
+		tl: (	padding-left: 2.5%, padding-right: 2.5%	),
+		tw: (	padding-left: 20px, padding-right: 20px	),
+		dl: (	padding-left: 24px, padding-right: 24px ),
+		dw: (	padding-left: 28px, padding-right: 28px ),
+		xw: (	padding-left: 32px, padding-right: 32px ),
+	));
+}
+%sidebarNegativeGaps {
+	@include propByBp((
+		mm: (	margin-left: -24px, margin-right: -24px	),
+		tp: (	margin-left: 0,		margin-right: 0	),
+		tl: (	margin-left: 0, 	margin-right: 0	),
+		tw: (	margin-left: -20px, margin-right: -20px	),
+		dl: (	margin-left: -24px, margin-right: -24px ),
+		dw: (	margin-left: -28px, margin-right: -28px ),
+		hd: (	margin-left: -32px, margin-right: -32px ),
+	));
+}
+%sidebarUnitGaps {
+	@include propByBp((
+		mm: (	padding: 24px 24px 32px	),
+		tp: (	padding: 20px 2.5% 32px	),
+		tl: (	padding: 20px 2.5% 32px	),
+		tw: (	padding: 22px 20px 30px	),
+		dl: (	padding: 24px 24px 32px ),
+		dw: (	padding: 24px 28px 32px ),
+		hd: (	padding: 24px 32px 32px ),
+		xw: (	padding: 26px 32px 36px ),
+	));
+}
+
+%top-headline{
+	@extend %ff-head;
+	margin: 0;
+	color: $c-greytext;
+	@include propByBp((
+		mm: (	font-size: 25px	),
+		dl: (	font-size: 29px ),
+		dw: (	font-size: 33px ),
+	));
+}
+
+%icon-close{
+	width: 16px;
+	height: 16px;
+	margin-left: 8px;
+	margin-right: 8px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	span{
+		position: absolute;
+		left: 0;
+		top: 7px;
+		height: 2px;
+		width: 16px;
+		background: $c-grey;
+		opacity: 1;
+		&:nth-child(1) {
+			transform: rotate(45deg);
+		}
+		&:nth-child(2) {
+			transform: rotate(-45deg);
+		}
+	}
+}
