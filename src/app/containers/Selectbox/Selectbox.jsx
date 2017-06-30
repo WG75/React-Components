@@ -11,6 +11,7 @@ export default class Selectbox extends Component {
 		options: PropTypes.array.isRequired,
 		defaultId: PropTypes.string.isRequired,
 		handleSelect: PropTypes.func,
+		matchMedia: PropTypes.object.isRequired,
 	};
 	constructor(props) {
 		super(props);
