@@ -8,13 +8,14 @@ import media from '../../mixins/Media/Media';
 @media()
 export default class Selectbox extends Component {
 
-    static propTypes = {
-        options: PropTypes.array.isRequired,
-        onChange: PropTypes.func,
-        defaultValue: PropTypes.string
-    };
+	static propTypes = {
+		options: PropTypes.array.isRequired,
+		defaultValue: PropTypes.string,
+		onChange: PropTypes.func,
+		matchMedia: PropTypes.object.isRequired
+	};
 
-    constructor(props) {
+constructor(props) {
         super(props);
         this.state = {
             selectedOption: this.getSelectedOption(props.defaultValue) || props.options[0]
