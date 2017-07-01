@@ -4,16 +4,18 @@ import './theme/core.scss';
 import Selectbox from './containers/Selectbox/Selectbox';
 
 const options = [{
-	id: 'id1',
-	title: 'Value 1'
+	label: 'id1',
+	value: 'Value 1'
 }, {
-	id: 'id2',
-	title: 'Value 2'
+	label: 'id2',
+	value: 'Value 2'
 }, {
-	id: 'id3',
-	title: 'Value 3'
+	label: 'id3',
+	value: 'Value 3'
 }];
 
+
+
 ReactDOM.render((
-	<Selectbox {...{options, defaultId: options[0].id}} />
+	<Selectbox {...{options, defaultValue: 'Value 2' ,onChange: (option) => {console.log(option)}}}/>
 ), document.getElementById('root'));

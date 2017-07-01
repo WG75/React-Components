@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "prestart": "webpack -p"
+    "prestart": "webpack -p",
+    "lint": "eslint src/app/containers/Selectbox/**",
+    "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",

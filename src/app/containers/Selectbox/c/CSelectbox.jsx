@@ -1,28 +1,46 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './selectbox.scss';
 import {svgArrow32} from '../../../theme/svg-inline';
 import SVGInline from 'react-svg-inline';
 
-export const CSelectbox = ({children, toggle, selectedText}) => (
+export const CSelectbox = ({children, selectedValue}) => (
 	<div className={styles.selectbox}>
-		<button className={styles.toggler} onClick={toggle}>
+		<div className={styles.toggler}>
 			<span className={styles.wrap}>
-				<span className={styles.placeholder}>{selectedText}</span>
+				<span className={styles.placeholder}>{selectedValue}</span>
 				<span className={styles.icon}>
-					<span className={styles.down}><SVGInline svg={svgArrow32} /></span>
+					<span className={styles.down}><SVGInline svg={svgArrow32}/></span>
 				</span>
 			</span>
-		</button>
+		</div>
 		{children}
 	</div>
 );
 
-export const CSelect = ({children, selectedValue, selectChange}) => (
-	<select value={selectedValue} onChange={selectChange}>
+CSelectbox.propTypes = {
+	children: PropTypes.node.isRequired,
+	selectedValue: PropTypes.string.isRequired
+};
+
+export const CSelect = ({children, selectedValue, handleChange}) => (
+	<select value={selectedValue} onChange={handleChange}>
 		{children}
 	</select>
 );
 
-export const COption = ({value, text}) => (
-	<option value={value}>{text}</option>
+CSelect.propTypes = {
+	children: PropTypes.node.isRequired,
+	selectedValue: PropTypes.string.isRequired,
+	handleChange: PropTypes.func.isRequired
+};
+
+
+export const COption = ({value, label}) => (
+	<option value={value}>{label}</option>
 );
+
+COption.propTypes = {
+	value: PropTypes.string.isRequired,
+	label: PropTypes.string.isRequired
+};

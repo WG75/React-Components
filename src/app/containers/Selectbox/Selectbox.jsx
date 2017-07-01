@@ -1,65 +1,64 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {
-	CSelectbox, CSelect, COption
-} from './c/CSelectbox';
+import {CSelectbox, CSelect, COption} from './c/CSelectbox';
+import Select from 'react-select';
 import media from '../../mixins/Media/Media';
+
 
 @media()
 export default class Selectbox extends Component {
-	static propTypes = {
-		options: PropTypes.array.isRequired,
-		defaultId: PropTypes.string.isRequired,
-		handleSelect: PropTypes.func,
-	};
-	constructor(props) {
-		super(props);
-		this.state = {
-			selectedId: props.defaultId,
-			opened: false
-		};
-	}
-	componentWillReceiveProps(nextProps, nextState) {
-		if (nextProps.defaultId !== this.state.selectedId) {
-			this.setState({
-				selectedId: nextProps.defaultId
-			});
-		}
-	}
-	selectChange = (e) => {
-		const {handleSelect} = this.props;
-		// const key = options.findIndex((option) => option.id === e.target.value);
-		this.setState({
-			selectedId: e.target.value
-		});
-		this.setState({
-			opened: false
-		});
-		if (handleSelect) {
-			handleSelect(e.target.value);
-		}
-	}
-	toggle = () => {
-		this.setState({
-			opened: !this.state.opened
-		});
-	}
-	render() {
-		const {options, matchMedia} = this.props;
 
-		const {opened, selectedId} = this.state;
-		const selectedItem = options.find(item => item.id === selectedId);
+    static propTypes = {
+        options: PropTypes.array.isRequired,
+        onChange: PropTypes.func,
+        defaultValue: PropTypes.string
+    };
 
-		return matchMedia.mobile
-			? (
-				<CSelectbox selectedText={selectedItem.title} toggle={this.toggle}>
-					<CSelect selectedId={selectedId} selectChange={this.selectChange}>
-						{options.map((item, key) => (
-							<COption key={key} value={item.id} text={item.title} />
-						))}
-					</CSelect>
-				</CSelectbox>
-			)
-			: null; // custom selectbox goes here
-	}
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedOption: this.getSelectedOption(props.defaultValue) || props.options[0]
+        };
+    }
+
+
+    onChange = (e) => {
+
+        const selectedOption = e.target ? this.getSelectedOption(e.target.value) : e;
+
+        if (this.props.onChange) {
+            this.props.onChange(selectedOption);
+            this.setState({selectedOption});
+        }else {
+						this.setState({selectedOption});
+				}
+    }
+
+    getSelectedOption = (value) => {
+        if (!value) return;
+        const {options} = this.props;
+
+        return options.filter(option => (option.value === value))[0];
+    }
+
+    render() {
+
+        const {
+              matchMedia,
+              options
+              } = this.props;
+
+        const {value, label} = this.state.selectedOption;
+
+        return matchMedia.mobile
+            ? (
+                <CSelectbox selectedValue={label}>
+                    <CSelect selectedValue={value} handleChange={this.onChange}>
+                        {options.map((option, key) => (<COption key={key} value={option.value} label={option.label}/>))}
+                    </CSelect>
+                </CSelectbox>
+            )
+            : <Select {...this.props} value={value} options={options} onChange={this.onChange} />;
+
+    }
 }

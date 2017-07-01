@@ -35,7 +35,12 @@ module.exports = {
 					'autoprefixer-loader?browsers=last 2 version',
 					'sass-loader?outputStyle=expanded&sourceMap'
 				]
-			}, {
+			},
+			{
+				test: /\.css$/,
+				loaders: ['style-loader','css-loader']
+			}
+			, {
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loaders: ['babel-loader']
