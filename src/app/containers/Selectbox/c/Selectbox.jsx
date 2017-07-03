@@ -40,9 +40,10 @@ constructor(props) {
 
     }
 
-    getSelectedOption = (value) => {
+    getSelectedOption = (value, nextProps = {}) => {
         if (!value) return null;
-        const {options} = this.props;
+
+        const options =  nextProps.options || this.props.options;
 
         return options.filter(option => (option.value === value))[0];
     }
@@ -50,7 +51,7 @@ constructor(props) {
 
 		componentWillReceiveProps(nextProps) {
 			const nextSelectedOption = nextProps.defaultValue ?
-																this.getSelectedOption(nextProps.defaultValue) :
+																this.getSelectedOption(nextProps.defaultValue, nextProps) :
 																nextProps.options[0]
 
 			if (this.state.selectedOption.value != nextSelectedOption.value) {

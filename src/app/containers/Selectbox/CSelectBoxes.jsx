@@ -96,7 +96,7 @@ export default class SelectBoxes extends Component {
                                                               defaultValue={this.state[`selectBox${key + i}`].value}
                                                               onChange={this.updateDpendentSBState(key + i)}/>)
 
-                                : dependentSB.push(<SelectBox options={this.state[`selectBox${ (key + i) - 1}`].options}
+                                : dependentSB.push(<SelectBox defaultValue={this.state[`selectBox${key + i}`].value} options={this.state[`selectBox${ (key + i) - 1}`].options}
                                                               onChange={this.updateDpendentSBState(key + i)}/>);
                         }
 
