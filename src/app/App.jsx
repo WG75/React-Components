@@ -1,21 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './theme/core.scss';
-import Selectbox from './containers/Selectbox/Selectbox';
-
-const options = [{
-	label: 'id1',
-	value: 'Value 1'
-}, {
-	label: 'id2',
-	value: 'Value 2'
-}, {
-	label: 'id3',
-	value: 'Value 3'
-}];
+import Selectbox from './containers/Selectbox/c/Selectbox';
+import CSelectBoxes from './containers/Selectbox/CSelectBoxes.jsx'
+import options from './data/options.js'
 
 
-
-ReactDOM.render((
-	<Selectbox {...{options, defaultValue: 'Value 2' ,onChange: (option) => {console.log(option)}}}/>
-), document.getElementById('root'));
+ReactDOM.render((<CSelectBoxes SBListOfOptions={options}/>), document.getElementById('root'));

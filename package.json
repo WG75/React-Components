@@ -45,6 +45,7 @@
     "react-addons-shallow-compare": "^15.6.0",
     "react-dom": "^15.5.4",
     "react-onclickoutside": "^6.1.1",
+    "react-select": "^1.0.0-rc.5",
     "react-svg-inline": "^2.0.0",
     "svgo": "^0.7.1",
     "svgo-loader": "^1.1.2"

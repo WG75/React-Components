@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {CSelectbox, CSelect, COption} from './c/CSelectbox';
+import {CSelectbox, CSelect, COption} from './CSelectbox';
 import Select from 'react-select';
-import media from '../../mixins/Media/Media';
+import media from '../../../mixins/Media/Media';
 
 
 @media()
@@ -11,8 +11,8 @@ export default class Selectbox extends Component {
 	static propTypes = {
 		options: PropTypes.array.isRequired,
 		defaultValue: PropTypes.string,
-		onChange: PropTypes.func,
-		matchMedia: PropTypes.object.isRequired
+		onChange: PropTypes.func ,
+		matchMedia: PropTypes.object
 	};
 
 constructor(props) {
@@ -27,20 +27,37 @@ constructor(props) {
 
         const selectedOption = e.target ? this.getSelectedOption(e.target.value) : e;
 
-        if (this.props.onChange) {
+			  if (this.props.onChange) {
             this.props.onChange(selectedOption);
-            this.setState({selectedOption});
-        }else {
-						this.setState({selectedOption});
-				}
+        }
+
+				this.setState({selectedOption}, () => {
+					if (this.state.selectedOption.value !=  selectedOption.value) {
+						this.setState({selectedOption})
+					}
+				})
+
+
     }
 
     getSelectedOption = (value) => {
-        if (!value) return;
+        if (!value) return null;
         const {options} = this.props;
 
         return options.filter(option => (option.value === value))[0];
     }
+
+
+		componentWillReceiveProps(nextProps) {
+			const nextSelectedOption = nextProps.defaultValue ?
+																this.getSelectedOption(nextProps.defaultValue) :
+																nextProps.options[0]
+
+			if (this.state.selectedOption.value != nextSelectedOption.value) {
+				this.setState({selectedOption: nextSelectedOption})
+			}
+		}
+
 
     render() {
 
