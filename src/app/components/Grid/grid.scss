@@ -1,0 +1,32 @@
+@import '../../theme/vars';
+@import '../../theme/functions';
+@import '../../theme/placeholders';
+@import '../../theme/mixins';
+
+.grid{
+	flex-grow: 1;
+	width: 100%; // ie11 fix
+}
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -20px -16px;
+}
+.item{
+	padding: 20px 16px;
+	flex: 1 0 100%;
+	min-width: 256px;
+	display: flex;
+	@include above((tp, portrait), (tl, landscape)) {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+	@include above(dl, landscape) {
+		flex-basis: 33.33333%;
+		max-width: 33.33333%;
+	}
+	@include above(xw, landscape) {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+}
