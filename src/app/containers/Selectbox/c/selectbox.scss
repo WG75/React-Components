@@ -2,11 +2,98 @@
 @import '../../../theme/placeholders';
 @import '../../../theme/mixins';
 
-.selectbox{
+
+.SelectBox {
 	position: relative;
-	border: 1px solid $c-greyborder;
-	background-color: rgba($c-greymidlightest, .5);
-	height: 44px;
+	font-family: sans-serif;
+	background: $dd-off-bg;
+	&:hover {
+		background: $c-white;
+	}
+
+	&,
+	& div,
+	& input,
+	& span {
+		box-sizing: border-box;
+	}
+}
+
+.Select-control {
+	border: 2px solid $dd-selected-op;
+	height: 85px;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
+	box-sizing: border-box;
+}
+
+
+.Select-arrow-zone {
+	margin-right: 20px;
+}
+
+.Select-clear-zone {
+	display: none;
+}
+
+.Select-value {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 20px;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	position: absolute;
+}
+
+
+.Select-menu-outer {
+	border: 2px solid $dd-selected-op;
+	margin-top: -2px;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 1000;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.Select-menu {
+	max-height: 398px;
+	overflow-y: auto;
+}
+
+.Select-option {
+	color: $c-black;
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	padding: 25px;
+	cursor: pointer;
+	&.is-selected{
+		color: $dd-selected-op;
+	}
+
+	&:hover{
+		background: $dd-option-hover;
+	}
+}
+
+
+
+
+
+
+//native selectbox
+.SelectBox{
+
 	select {
 		position: absolute;
 		top: 0;
@@ -19,75 +106,14 @@
 		}
 	}
 }
-.toggler{
-	font-size: 14px;
-	/*line-height: 18px;*/
-	height: 100%;
-	width: 100%;
-	padding: 0 15px;
-	@include propInCompany(dark, color);
-	@include above(tp, portrait){
-		width: auto;
-	}
-}
+
 .wrap{
 	display: flex;
 	align-items: center;
-}
-.placeholder{
-	flex-grow: 1;
-	padding-right: 12px;
-}
-.icon{
-	width: 16px;
-	height: 16px;
-}
-.up{
-	width: 16px;
-	height: 16px;
-	display: block;
-	margin: auto;
-	transform: rotate(-180deg);
-	svg{
-		display: block;
-		width: 100%;
-		height: 100%;
-		@include propInCompany(dark, fill);
-	}
-}
-.down{
-	@extend .up;
-	transform: rotate(0deg);
-}
-.dropdown{
-	position: absolute;
-	top: -12px;
-	right: 0;
-	display: none;
-	background-color: $c-white;
-	z-index: 10;
-	padding: 12px 32px;
-	box-shadow: 0 0 32px rgba($c-black, .1);
-	@include fadeOut;
-	@include above(tp, portrait){
-		display: block;
-	}
-	&-open{
-		@extend .dropdown;
-		@include fadeIn;
-	}
-	&-item{
-		font-size: 14px;
-		line-height: 18px;
-		white-space: nowrap;
-		display: block;
-		width: 100%;
-		height: 48px;
-		text-align: right;
-		color: $c-black;
-		&-active{
-			@extend .dropdown-item;
-			color: $c-blueLink;
-		}
-	}
+	justify-content: space-between;
+	flex: 1;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 20px;
+
 }

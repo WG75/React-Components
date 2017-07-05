@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import SelectBox from './c/Selectbox.jsx';
-import 'react-select/dist/react-select.css';
+import 'react-select/scss/default.scss';
 
 export default class SelectBoxes extends Component {
 

@@ -31,14 +31,10 @@ module.exports = {
 				test: /\.scss$/,
 				loaders: [
 					'style-loader',
-					'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
+					'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]',
 					'autoprefixer-loader?browsers=last 2 version',
 					'sass-loader?outputStyle=expanded&sourceMap'
 				]
-			},
-			{
-				test: /\.css$/,
-				loaders: ['style-loader','css-loader']
 			}
 			, {
 				test: /\.jsx?$/,

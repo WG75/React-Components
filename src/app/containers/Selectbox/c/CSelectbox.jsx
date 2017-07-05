@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './selectbox.scss';
 import {svgArrow32} from '../../../theme/svg-inline';
 import SVGInline from 'react-svg-inline';
+import styles from './selectbox.scss'
 
 export const CSelectbox = ({children, selectedValue}) => (
-	<div className={styles.selectbox}>
-		<div className={styles.toggler}>
+	<div className={styles.SelectBox}>
+		<div className={'Select-control'}>
 			<span className={styles.wrap}>
-				<span className={styles.placeholder}>{selectedValue}</span>
-				<span className={styles.icon}>
-					<span className={styles.down}><SVGInline svg={svgArrow32}/></span>
+				<span>{selectedValue}</span>
+				<span>
+					<span><SVGInline svg={svgArrow32}/></span>
 				</span>
 			</span>
 		</div>

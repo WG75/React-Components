@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {CSelectbox, CSelect, COption} from './CSelectbox';
 import Select from 'react-select';
 import media from '../../../mixins/Media/Media';
+import {svgArrow32} from '../../../theme/svg-inline';
+import SVGInline from 'react-svg-inline';
 
 
 @media()
@@ -77,7 +79,11 @@ constructor(props) {
                     </CSelect>
                 </CSelectbox>
             )
-            : <Select {...this.props} value={value} options={options} onChange={this.onChange} />;
+            : <Select
+							arrowRenderer={() =><span className={'styles.down'}><SVGInline svg={svgArrow32}/></span>}
+							className='SelectBox' {...this.props} value={value} clearable={false} searchable={false}
+							options={options}
+							onChange={this.onChange} />;
 
     }
 }
