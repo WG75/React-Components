@@ -10,7 +10,7 @@ export const CSelectbox = ({children, selectedValue}) => (
 			<span className={styles.wrap}>
 				<span>{selectedValue}</span>
 				<span>
-					<span><SVGInline svg={svgArrow32}/></span>
+					<span><SVGInline className={styles.down} svg={svgArrow32}/></span>
 				</span>
 			</span>
 		</div>

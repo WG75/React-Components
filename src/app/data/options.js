@@ -980,1227 +980,1227 @@ export default[
 			value: '#c244',
 			label: 'Zypern'
 		}
-	]
-    // [
-    //     {
-    //         value: 'gruppe',
-    //         label: 'Group',
-		// 	options: [
-		// 		{
-		// 			value: 'h0',
-		// 			label: 'Alle Anwendungsbereiche',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h1',
-		// 			label: 'Haus',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h2',
-		// 			label: 'Apartment',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h3',
-		// 			label: 'Gewerbe/Industrie',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h4',
-		// 			label: 'Versorgung',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h5',
-		// 			label: 'Energiemanagement',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		}
-		// 	]
-    //     }, {
-    //         value: 'metall',
-    //         label: 'Metall',
-		// 	options: [
-		// 		{
-		// 			value: 'h0',
-		// 			label: 'Alle Anwendungsbereiche',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h1',
-		// 			label: 'Haus',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h2',
-		// 			label: 'Apartment',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h3',
-		// 			label: 'Gewerbe/Industrie',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h4',
-		// 			label: 'Versorgung',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h5',
-		// 			label: 'Energiemanagement',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		}
-		// 	]
-    //     }, {
-    //         value: 'controls',
-    //         label: 'Controls',
-		// 	options: [
-		// 		{
-		// 			value: 'h0',
-		// 			label: 'Alle Anwendungsbereiche',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h1',
-		// 			label: 'Haus',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h2',
-		// 			label: 'Apartment',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h3',
-		// 			label: 'Gewerbe/Industrie',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h4',
-		// 			label: 'Versorgung',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h5',
-		// 			label: 'Energiemanagement',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		}
-		// 	]
-    //     }, {
-    //         value: 'metering',
-    //         label: 'Metering',
-		// 	options: [
-		// 		{
-		// 			value: 'h0',
-		// 			label: 'Alle Anwendungsbereiche',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h1',
-		// 			label: 'Haus',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h2',
-		// 			label: 'Apartment',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h3',
-		// 			label: 'Gewerbe/Industrie',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h4',
-		// 			label: 'Versorgung',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h5',
-		// 			label: 'Energiemanagement',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		}
-		// 	]
-    //     }, {
-    //         value: 'aerosystems',
-    //         label: 'Aerosystems',
-		// 	options: [
-		// 		{
-		// 			value: 'h0',
-		// 			label: 'Alle Anwendungsbereiche',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h1',
-		// 			label: 'Haus',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h2',
-		// 			label: 'Apartment',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h3',
-		// 			label: 'Gewerbe/Industrie',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h4',
-		// 			label: 'Versorgung',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h5',
-		// 			label: 'Energiemanagement',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		}
-		// 	]
-    //     }, {
-    //         value: 'defence',
-    //         label: 'Defence',
-		// 	options: [
-		// 		{
-		// 			value: 'h0',
-		// 			label: 'Alle Anwendungsbereiche',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h1',
-		// 			label: 'Haus',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h2',
-		// 			label: 'Apartment',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h3',
-		// 			label: 'Gewerbe/Industrie',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p9',
-		// 					label: '- Standrohr'
-		// 				},
-		// 				{
-		// 					value: '#p10',
-		// 					label: 'Ringkolbenzähler'
-		// 				},
-		// 				{
-		// 					value: '#p11',
-		// 					label: 'Grosswasserzähler'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h4',
-		// 			label: 'Versorgung',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p1',
-		// 					label: 'Ultraschallzähler'
-		// 				},
-		// 				{
-		// 					value: '#p2',
-		// 					label: 'Elektronische Zähler'
-		// 				},
-		// 				{
-		// 					value: '#p3',
-		// 					label: '- Mehrstrahl'
-		// 				},
-		// 				{
-		// 					value: '#p4',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p12',
-		// 					label: '- Woltman'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		},
-		// 		{
-		// 			value: 'h5',
-		// 			label: 'Energiemanagement',
-		// 			options: [
-		// 				{
-		// 					value: '#p0',
-		// 					label: 'Alle Produkttypen'
-		// 				},
-		// 				{
-		// 					value: '#p5',
-		// 					label: 'Einstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p6',
-		// 					label: 'Mehrstrahlzähler'
-		// 				},
-		// 				{
-		// 					value: '#p7',
-		// 					label: '- Nassläufer'
-		// 				},
-		// 				{
-		// 					value: '#p8',
-		// 					label: '- Trockenläufer'
-		// 				},
-		// 				{
-		// 					value: '#p13',
-		// 					label: '- Standrohr'
-		// 				}
-		// 			]
-		// 		}
-		// 	]
-    //     }
-    // ],
-    // [
-    //     {
-    //         value: 'yesterday',
-    //         label: 'Yesterday'
-    //     }, {
-    //         value: 'today',
-    //         label: 'Today'
-    //     }, {
-    //         value: 'tomorrow',
-    //         label: 'Tomorrow'
-    //     }
-    // ]
+	],
+    [
+        {
+            value: 'gruppe',
+            label: 'Group',
+			options: [
+				{
+					value: 'h0',
+					label: 'Alle Anwendungsbereiche',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h1',
+					label: 'Haus',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+					]
+				},
+				{
+					value: 'h2',
+					label: 'Apartment',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+					]
+				},
+				{
+					value: 'h3',
+					label: 'Gewerbe/Industrie',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h4',
+					label: 'Versorgung',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h5',
+					label: 'Energiemanagement',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				}
+			]
+        }, {
+            value: 'metall',
+            label: 'Metall',
+			options: [
+				{
+					value: 'h0',
+					label: 'Alle Anwendungsbereiche',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h1',
+					label: 'Haus',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+					]
+				},
+				{
+					value: 'h2',
+					label: 'Apartment',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+					]
+				},
+				{
+					value: 'h3',
+					label: 'Gewerbe/Industrie',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h4',
+					label: 'Versorgung',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h5',
+					label: 'Energiemanagement',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				}
+			]
+        }, {
+            value: 'controls',
+            label: 'Controls',
+			options: [
+				{
+					value: 'h0',
+					label: 'Alle Anwendungsbereiche',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h1',
+					label: 'Haus',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+					]
+				},
+				{
+					value: 'h2',
+					label: 'Apartment',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+					]
+				},
+				{
+					value: 'h3',
+					label: 'Gewerbe/Industrie',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h4',
+					label: 'Versorgung',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h5',
+					label: 'Energiemanagement',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				}
+			]
+        }, {
+            value: 'metering',
+            label: 'Metering',
+			options: [
+				{
+					value: 'h0',
+					label: 'Alle Anwendungsbereiche',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h1',
+					label: 'Haus',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+					]
+				},
+				{
+					value: 'h2',
+					label: 'Apartment',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+					]
+				},
+				{
+					value: 'h3',
+					label: 'Gewerbe/Industrie',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h4',
+					label: 'Versorgung',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h5',
+					label: 'Energiemanagement',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				}
+			]
+        }, {
+            value: 'aerosystems',
+            label: 'Aerosystems',
+			options: [
+				{
+					value: 'h0',
+					label: 'Alle Anwendungsbereiche',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h1',
+					label: 'Haus',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+					]
+				},
+				{
+					value: 'h2',
+					label: 'Apartment',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+					]
+				},
+				{
+					value: 'h3',
+					label: 'Gewerbe/Industrie',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h4',
+					label: 'Versorgung',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h5',
+					label: 'Energiemanagement',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				}
+			]
+        }, {
+            value: 'defence',
+            label: 'Defence',
+			options: [
+				{
+					value: 'h0',
+					label: 'Alle Anwendungsbereiche',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h1',
+					label: 'Haus',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+					]
+				},
+				{
+					value: 'h2',
+					label: 'Apartment',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+					]
+				},
+				{
+					value: 'h3',
+					label: 'Gewerbe/Industrie',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p9',
+							label: '- Standrohr'
+						},
+						{
+							value: '#p10',
+							label: 'Ringkolbenzähler'
+						},
+						{
+							value: '#p11',
+							label: 'Grosswasserzähler'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h4',
+					label: 'Versorgung',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p1',
+							label: 'Ultraschallzähler'
+						},
+						{
+							value: '#p2',
+							label: 'Elektronische Zähler'
+						},
+						{
+							value: '#p3',
+							label: '- Mehrstrahl'
+						},
+						{
+							value: '#p4',
+							label: '- Woltman'
+						},
+						{
+							value: '#p12',
+							label: '- Woltman'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				},
+				{
+					value: 'h5',
+					label: 'Energiemanagement',
+					options: [
+						{
+							value: '#p0',
+							label: 'Alle Produkttypen'
+						},
+						{
+							value: '#p5',
+							label: 'Einstrahlzähler'
+						},
+						{
+							value: '#p6',
+							label: 'Mehrstrahlzähler'
+						},
+						{
+							value: '#p7',
+							label: '- Nassläufer'
+						},
+						{
+							value: '#p8',
+							label: '- Trockenläufer'
+						},
+						{
+							value: '#p13',
+							label: '- Standrohr'
+						}
+					]
+				}
+			]
+        }
+    ],
+    [
+        {
+            value: 'yesterday',
+            label: 'Yesterday'
+        }, {
+            value: 'today',
+            label: 'Today'
+        }, {
+            value: 'tomorrow',
+            label: 'Tomorrow'
+        }
+    ]
 
 ];

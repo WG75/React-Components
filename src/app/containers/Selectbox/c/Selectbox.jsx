@@ -5,7 +5,7 @@ import Select from 'react-select';
 import media from '../../../mixins/Media/Media';
 import {svgArrow32} from '../../../theme/svg-inline';
 import SVGInline from 'react-svg-inline';
-
+import styles from './selectbox.scss';
 
 @media()
 export default class Selectbox extends Component {
@@ -80,7 +80,7 @@ constructor(props) {
                 </CSelectbox>
             )
             : <Select
-							arrowRenderer={() =><span className={'styles.down'}><SVGInline svg={svgArrow32}/></span>}
+							arrowRenderer={() =><span className={styles.down}><SVGInline svg={svgArrow32}/></span>}
 							className='SelectBox' {...this.props} value={value} clearable={false} searchable={false}
 							options={options}
 							onChange={this.onChange} />;

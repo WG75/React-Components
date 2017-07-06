@@ -10,13 +10,15 @@
 .list {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -20px -16px;
 }
 .item{
 	padding: 20px 16px;
 	flex: 1 0 100%;
 	min-width: 256px;
 	display: flex;
+	box-sizing: border-box;
+
+
 	@include above((tp, portrait), (tl, landscape)) {
 		flex-basis: 50%;
 		max-width: 50%;
@@ -28,5 +30,61 @@
 	@include above(xw, landscape) {
 		flex-basis: 25%;
 		max-width: 25%;
+	}
+}
+
+
+
+.SB1 {
+
+	.item{
+
+		@include above(tl, landscape) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+
+		@include above(dw, landscape) {
+			flex-basis: 33.3333%;
+			max-width: 33.3333%;
+		}
+
+	}
+}
+
+.SB2 {
+	.item {
+		@include above((tp, portrait), (tl, landscape)) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+	}
+}
+
+.SB3 {
+
+	.item {
+		@include above(tw, landscape) {
+			flex-basis: 33.3333%;
+			max-width: 33.3333%;
+		}
+	}
+}
+
+
+.SB4 {
+
+	.item {
+
+		@include above((tp, portrait), (tl, landscape)) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+
+		@include above(dw, landscape) {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+
 	}
 }
