@@ -83,7 +83,22 @@ export default class SelectBoxes extends Component {
         };
 
     }
+	getDependentSB = (SBListOfOptions, optionsList, key) => {
+		const depth = this.getDepthLevel(SBListOfOptions[key][0], 0, key);
+		const dependentSB = [];
 
+		for (let i = 0; i <= depth; i++) {
+			dependentSB.push(
+				<GridItem key={key + i}>
+					<SelectBox	options={i === 0 ? optionsList : this.state[`selectBox${ (key + i) - 1}`].options}
+								defaultValue={this.state[`selectBox${key + i}`].value}
+								onChange={this.updateDpendentSBState(key + i)}/>
+				</GridItem>
+			);
+		}
+
+		return dependentSB;
+	}
     render() {
 
         const {SBListOfOptions} = this.props;
@@ -94,31 +109,11 @@ export default class SelectBoxes extends Component {
             <Grid num={selectBoxesNum}>
                 {SBListOfOptions.map((optionsList, key) => !optionsList[0].options
 					? (
-                        <GridItem key={key}>
-                            <SelectBox options={optionsList}/>
-                        </GridItem>
-                	) : () => {
-                        const depth = this.getDepthLevel(SBListOfOptions[key][0], 0, key);
-                        const dependentSB = [];
-
-                        for (let i = 0; i <= depth; i++) {
-                            if (i === 0) {
-                                dependentSB.push(
-                                    <GridItem key={key + i}>
-                                        <SelectBox options={optionsList} defaultValue={this.state[`selectBox${key + i}`].value} onChange={this.updateDpendentSBState(key + i)}/>
-                                    </GridItem>
-                                );
-							} else {
-                                dependentSB.push(
-                                    <GridItem key={key + i}>
-                                        <SelectBox defaultValue={this.state[`selectBox${key + i}`].value} options={this.state[`selectBox${ (key + i) - 1}`].options} onChange={this.updateDpendentSBState(key + i)}/>
-                                    </GridItem>
-                                );
-							}
-                        }
-
-                    	return dependentSB;
-					}
+						<GridItem key={key}>
+							<SelectBox options={optionsList}/>
+						</GridItem>
+                    )
+					: this.getDependentSB(SBListOfOptions, optionsList, key)
                 )}
             </Grid>
         );
