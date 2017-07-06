@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import SelectBox from './c/Selectbox.jsx';
-import 'react-select/scss/default.scss';
+// import 'react-select/scss/default.scss';
 import {Grid, GridItem} from '../../components/Grid/Grid.jsx';
 
 export default class SelectBoxes extends Component {
