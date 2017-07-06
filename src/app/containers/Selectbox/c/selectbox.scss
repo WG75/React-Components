@@ -21,7 +21,7 @@
 }
 
 .Select-control {
-	border: 1.5px solid $dd-selected-op;
+	border: 1px solid $dd-selected-op;
 	height: 44px;
 	outline: none;
 	overflow: hidden;
@@ -54,8 +54,8 @@
 }
 
 .Select-menu-outer {
-	border: 1.5px solid $dd-selected-op;
-	margin-top: -1.5px;
+	border: 1px solid $dd-selected-op;
+	margin-top: -1px;
 	position: absolute;
 	top: 100%;
 	width: 100%;
