@@ -18,6 +18,7 @@ export default class SelectBoxes extends Component {
     // a recursive function that get the depth of nested options
 
     getDepthLevel = ({options}, depth, start) => {
+
         if (options) {
             depth += 1;
             return this.getDepthLevel(options[0], depth, start);

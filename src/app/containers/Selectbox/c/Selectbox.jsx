@@ -13,7 +13,7 @@ export default class Selectbox extends Component {
 	static propTypes = {
 		options: PropTypes.array.isRequired,
 		defaultValue: PropTypes.string,
-		onChange: PropTypes.func ,
+		onChange: PropTypes.func,
 		matchMedia: PropTypes.object
 	};
 
@@ -25,19 +25,28 @@ constructor(props) {
     }
 
 
+
+		componentWillReceiveProps(nextProps) {
+			const nextSelectedOption = nextProps.defaultValue ?
+																this.getSelectedOption(nextProps.defaultValue, nextProps) :
+																nextProps.options[0];
+
+			if (this.state.selectedOption.value !== nextSelectedOption.value) {
+				this.setState({selectedOption: nextSelectedOption});
+			}
+		}
+
     onChange = (e) => {
 
-        const selectedOption = e.target ? this.getSelectedOption(e.target.value) : e;
-
-			  if (this.props.onChange) {
+        const selectedOption = e.target ? this.getSelectedOption(e.target.value) : e; if (this.props.onChange) {
             this.props.onChange(selectedOption);
         }
 
 				this.setState({selectedOption}, () => {
-					if (this.state.selectedOption.value !=  selectedOption.value) {
-						this.setState({selectedOption})
+					if (this.state.selectedOption.value !== selectedOption.value) {
+						this.setState({selectedOption});
 					}
-				})
+				});
 
 
     }
@@ -45,21 +54,11 @@ constructor(props) {
     getSelectedOption = (value, nextProps = {}) => {
         if (!value) return null;
 
-        const options =  nextProps.options || this.props.options;
+        const options = nextProps.options || this.props.options;
 
         return options.filter(option => (option.value === value))[0];
     }
 
-
-		componentWillReceiveProps(nextProps) {
-			const nextSelectedOption = nextProps.defaultValue ?
-																this.getSelectedOption(nextProps.defaultValue, nextProps) :
-																nextProps.options[0]
-
-			if (this.state.selectedOption.value != nextSelectedOption.value) {
-				this.setState({selectedOption: nextSelectedOption})
-			}
-		}
 
 
     render() {
@@ -81,7 +80,7 @@ constructor(props) {
             )
             : <Select
 							arrowRenderer={() =><span className={styles.down}><SVGInline svg={svgArrow16}/></span>}
-							className='SelectBox' {...this.props} value={value} clearable={false} searchable={false}
+							className="SelectBox" {...this.props} value={value} clearable={false} searchable={false}
 							options={options}
 							onChange={this.onChange} />;
 

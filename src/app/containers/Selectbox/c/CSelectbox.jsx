@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {svgArrow16} from '../../../theme/svg-inline';
 import SVGInline from 'react-svg-inline';
-import styles from './selectbox.scss'
+import styles from './selectbox.scss';
 
 export const CSelectbox = ({children, selectedValue}) => (
 	<div className={styles.SelectBox}>

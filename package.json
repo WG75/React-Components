@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "prestart": "webpack -p",
-    "lint": "eslint src/app/containers/Selectbox/**",
+    "lint": "eslint src/app/containers/Selectbox/c/Selectbox.jsx",
     "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {
