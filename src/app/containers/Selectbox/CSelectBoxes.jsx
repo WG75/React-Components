@@ -92,36 +92,34 @@ export default class SelectBoxes extends Component {
         return (
 
             <Grid num={selectBoxesNum}>
-                {SBListOfOptions.map((optionsList, key) => {
-
-                    if (!optionsList[0].options) {
-                        return (
-                            <GridItem key={key}>
-                                <SelectBox options={optionsList}/>
-                            </GridItem>
-                        );
-                    } else {
+                {SBListOfOptions.map((optionsList, key) => !optionsList[0].options
+					? (
+                        <GridItem key={key}>
+                            <SelectBox options={optionsList}/>
+                        </GridItem>
+                	) : () => {
                         const depth = this.getDepthLevel(SBListOfOptions[key][0], 0, key);
                         const dependentSB = [];
 
                         for (let i = 0; i <= depth; i++) {
-                            i === 0
-                                ? dependentSB.push(
+                            if (i === 0) {
+                                dependentSB.push(
                                     <GridItem key={key + i}>
                                         <SelectBox options={optionsList} defaultValue={this.state[`selectBox${key + i}`].value} onChange={this.updateDpendentSBState(key + i)}/>
                                     </GridItem>
-                                )
-
-                                : dependentSB.push(
+                                );
+							} else {
+                                dependentSB.push(
                                     <GridItem key={key + i}>
                                         <SelectBox defaultValue={this.state[`selectBox${key + i}`].value} options={this.state[`selectBox${ (key + i) - 1}`].options} onChange={this.updateDpendentSBState(key + i)}/>
                                     </GridItem>
                                 );
+							}
                         }
 
-                        return dependentSB;
-                    }
-                })}
+                    	return dependentSB;
+					}
+                )}
             </Grid>
         );
 
