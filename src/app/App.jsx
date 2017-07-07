@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Selectbox from './containers/Selectbox/c/Selectbox';
-import CSelectBoxes from './containers/Selectbox/SelectBoxes';
+import Selectboxes from './containers/Selectbox/SelectBoxes';
 import options from './data/options.js';
 
 // const options = [
@@ -69,4 +69,4 @@ import options from './data/options.js';
 //     ]
 // ]
 
-ReactDOM.render((<CSelectBoxes SBListOfOptions={options}/>), document.getElementById('root'));
+ReactDOM.render((<Selectboxes SBListOfOptions={options}/>), document.getElementById('root'));
