@@ -6,6 +6,8 @@
 .grid{
 	flex-grow: 1;
 	width: 100%; // ie11 fix
+	margin:  -20px -16px;
+
 }
 .list {
 	display: flex;

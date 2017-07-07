@@ -31,7 +31,7 @@ module.exports = {
 				test: /\.scss$/,
 				loaders: [
 					'style-loader',
-					'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]',
+					'css-loader?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]',
 					'autoprefixer-loader?browsers=last 2 version',
 					'sass-loader?outputStyle=expanded&sourceMap'
 				]
@@ -40,7 +40,12 @@ module.exports = {
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loaders: ['babel-loader']
-			}, {
+			},
+			{
+				test: /\.css$/,
+				loaders: ['style-loader', 'css-loader']
+			},
+			{
 				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
 				loader: 'raw-loader' + svgoQuery,
 			}

@@ -2,114 +2,119 @@
 @import '../../../theme/placeholders';
 @import '../../../theme/mixins';
 
-.SelectBox {
-	position: relative;
-	font-family: sans-serif;
-	background: $dd-off-bg;
-	width: 100%;
 
-	&:hover {
+:global {
+	.SelectBox {
+		position: relative;
+		font-family: sans-serif;
+		background: $dd-off-bg;
+		width: 100%;
+
+		&:hover {
+			background: $c-white;
+		}
+	}
+
+	.Select-control {
+		border: 1px solid $dd-selected-op;
+		height: 44px;
+		outline: none;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-sizing: border-box;
+	}
+
+	.Select-arrow-zone {
+		margin-right: 10px;
+		width: 16px;
+		height: 16px;
+		display: block;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	}
+
+	.Select-clear-zone {
+		display: none;
+	}
+
+	.Select-value {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 0 10px;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		position: absolute;
+	}
+
+	.Select-menu-outer {
+		border: 1px solid $dd-selected-op;
+		margin-top: -1px;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		z-index: 1000;
+		-webkit-overflow-scrolling: touch;
 		background: $c-white;
 	}
 
-	&,
-	& div,
-	& input,
-	& span {
-		box-sizing: border-box;
-	}
-}
-
-.Select-control {
-	border: 1px solid $dd-selected-op;
-	height: 44px;
-	outline: none;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	box-sizing: border-box;
-}
-
-.Select-arrow-zone {
-	margin-right: 10px;
-}
-
-.Select-clear-zone {
-	display: none;
-}
-
-.Select-value {
-	display: flex;
-	align-items: center;
-	font-size: 14px;
-	font-weight: 700;
-	padding: 10px;
-	bottom: 0;
-	left: 0;
-	height: 100%;
-	position: absolute;
-}
-
-.Select-menu-outer {
-	border: 1px solid $dd-selected-op;
-	margin-top: -1px;
-	position: absolute;
-	top: 100%;
-	width: 100%;
-	z-index: 1000;
-	-webkit-overflow-scrolling: touch;
-	background: $c-white;
-}
-
-.Select-menu {
-	max-height: 412px;
-	overflow-y: auto;
-}
-
-.Select-option {
-	color: $c-black;
-	font-size: 14px;
-	font-weight: 700;
-	display: block;
-	padding: 14px;
-	cursor: pointer;
-
-	&.is-selected {
-		color: $dd-selected-op;
+	.Select-menu {
+		max-height: 412px;
+		overflow-y: auto;
 	}
 
-	&:hover {
-		background: $dd-option-hover;
-	}
-}
+	.Select-option {
+		color: $c-black;
+		font-size: 14px;
+		font-weight: 700;
+		display: block;
+		padding: 14px;
+		cursor: pointer;
 
-.down {
-	fill: $dd-selected-op;
-}
-//native selectbox
-.SelectBox {
-	select {
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		@include above(tp, portrait) {
-			display: none;
+		&.is-selected {
+			color: $dd-selected-op;
+		}
+
+		&:hover {
+			background: $dd-option-hover;
 		}
 	}
-}
 
-.wrap {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex: 1;
-	font-size: 14px;
-	font-weight: 700;
-	padding: 10px;
+	.down {
+		fill: $dd-selected-op;
+	}
+	//native selectbox
+	.SelectBox {
+		select {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			@include above(tp, portrait) {
+				display: none;
+			}
+		}
+	}
+
+	.wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 1;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 10px;
+	}
 }
