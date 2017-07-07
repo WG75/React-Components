@@ -44,3 +44,7 @@ COption.propTypes = {
 	value: PropTypes.string.isRequired,
 	label: PropTypes.string.isRequired
 };
+
+export const CArrow = () => (
+	<span className={styles.down}><SVGInline svg={svgArrow16}/></span>
+);

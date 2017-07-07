@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import SelectBox from './c/Selectbox.jsx';
+import Selectbox from './Selectbox';
 // import 'react-select/scss/default.scss';
-import {Grid, GridItem} from '../../components/Grid/Grid.jsx';
+import {Grid, GridItem} from '../../components/Grid/Grid';
 
-export default class SelectBoxes extends Component {
+export default class Selectboxes extends Component {
 
     static propTypes = {
         SBListOfOptions: PropTypes.array.isRequired
@@ -61,7 +61,24 @@ export default class SelectBoxes extends Component {
         return start;
     }
 
-    // another recursive function that's responsible for updating the state for changing selectbox
+	getDependentSB = (SBListOfOptions, optionsList, key) => {
+		const depth = this.getDepthLevel(SBListOfOptions[key][0], 0, key);
+		const dependentSB = [];
+
+		for (let i = 0; i <= depth; i++) {
+			dependentSB.push(
+				<GridItem key={key + i}>
+					<Selectbox	options={i === 0 ? optionsList : this.state[`selectBox${ (key + i) - 1}`].options}
+								defaultValue={this.state[`selectBox${key + i}`].value}
+								onChange={this.updateDpendentSBState(key + i)}/>
+				</GridItem>
+			);
+		}
+
+		return dependentSB;
+	}
+
+	// another recursive function that's responsible for updating the state for changing selectbox
     // and all selectboxes that depends on it
 
     syncStateToOptions = (start, selectedOption, state = {}) => {
@@ -83,22 +100,7 @@ export default class SelectBoxes extends Component {
         };
 
     }
-	getDependentSB = (SBListOfOptions, optionsList, key) => {
-		const depth = this.getDepthLevel(SBListOfOptions[key][0], 0, key);
-		const dependentSB = [];
 
-		for (let i = 0; i <= depth; i++) {
-			dependentSB.push(
-				<GridItem key={key + i}>
-					<SelectBox	options={i === 0 ? optionsList : this.state[`selectBox${ (key + i) - 1}`].options}
-								defaultValue={this.state[`selectBox${key + i}`].value}
-								onChange={this.updateDpendentSBState(key + i)}/>
-				</GridItem>
-			);
-		}
-
-		return dependentSB;
-	}
     render() {
 
         const {SBListOfOptions} = this.props;
@@ -110,7 +112,7 @@ export default class SelectBoxes extends Component {
                 {SBListOfOptions.map((optionsList, key) => !optionsList[0].options
 					? (
 						<GridItem key={key}>
-							<SelectBox options={optionsList}/>
+							<Selectbox options={optionsList}/>
 						</GridItem>
                     )
 					: this.getDependentSB(SBListOfOptions, optionsList, key)

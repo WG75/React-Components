@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Selectbox from './containers/Selectbox/c/Selectbox';
-import CSelectBoxes from './containers/Selectbox/CSelectBoxes.jsx';
+// import Selectbox from './containers/Selectbox/c/Selectbox';
+import CSelectBoxes from './containers/Selectbox/SelectBoxes';
 import options from './data/options.js';
 
 // const options = [
