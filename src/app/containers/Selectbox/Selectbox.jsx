@@ -24,7 +24,7 @@ export default class Selectbox extends Component {
 	componentWillReceiveProps(nextProps) {
 		const nextSelectedOption = nextProps.defaultValue
 			? this.getSelectedOption(nextProps.defaultValue, nextProps)
-			: nextProps.options[0];
+			: this.state.selectedOption;
 
 		if (this.state.selectedOption.value !== nextSelectedOption.value) {
 			this.setState({selectedOption: nextSelectedOption});
@@ -74,7 +74,7 @@ export default class Selectbox extends Component {
 					</CSelect>
 				</CSelectbox>
 			)
-			: <Select arrowRenderer={() => <CArrow />} className="SelectBox" {...this.props} value={value} clearable={false} searchable={false} options={options} onChange={this.onChange}/>;
+			: <Select arrowRenderer={() => <CArrow />} className="SelectBox" {...this.props} value={value} options={options} onChange={this.onChange}/>;
 
 	}
 }

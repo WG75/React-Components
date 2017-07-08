@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {svgArrow16} from '../../../theme/svg-inline';
 import SVGInline from 'react-svg-inline';
-import styles from './selectbox.scss';
+import './selectbox.scss';
 
 export const CSelectbox = ({children, selectedValue}) => (
-	<div className={styles.SelectBox}>
+	<div className={'SelectBox'}>
 		<div className={'Select-control'}>
-			<span className={styles.wrap}>
+			<span className={'wrap'}>
 				<span>{selectedValue}</span>
 				<span>
-					<span><SVGInline className={styles.down} svg={svgArrow16}/></span>
+					<CArrow/>
 				</span>
 			</span>
 		</div>
@@ -46,5 +46,5 @@ COption.propTypes = {
 };
 
 export const CArrow = () => (
-	<span className={styles.down}><SVGInline svg={svgArrow16}/></span>
+	<span><SVGInline className={'down'} svg={svgArrow16}/></span>
 );
